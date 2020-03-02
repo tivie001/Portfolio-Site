@@ -1,0 +1,114 @@
+/*----------- BODY --------------*/
+
+.story1 {
+  grid-column: span 8;
+  padding: 7px 7px 7px 0;
+  height: 100%;
+}
+.story23 {
+  grid-column: span 4;
+  padding: 7px 7px 7px 0;
+  height: 100%;
+}
+.story4 {
+  grid-column: span 3;
+  padding: 14px 7px 0 0;
+  height: 100%;
+}
+.story5 {
+  grid-column: span 3;
+  padding: 14px 7px 0 0;
+  height: 100%;
+}
+.story6 {
+  grid-column: span 3;
+  padding: 14px 7px 0 0;
+  height: 100%;
+}
+.story7 {
+  grid-column: span 3;
+  padding: 14px 7px 0 0;
+  height: 100%;
+}
+#largeStory {
+  display: block;
+}
+#mediumSmallStory {
+  display: none;
+}
+
+/*----------- Footer --------------*/
+
+#footerWrapper {
+  font-family: "Avenir Next";
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  text-align: justify;
+  background-color: #d6d6d6;
+  padding-top: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+.footer-column1 {
+  grid-column: span 3;
+  padding-left: 30%;
+  height: 300px;
+}
+.footer-column2 {
+  grid-column: span 3;
+  height: 300px;
+  padding-left: 30%;
+
+}
+.footer-column3 {
+  grid-column: span 3;
+  padding-left: 30%;
+  height: 300px;
+}
+.footer-column4 {
+  grid-column: span 3;
+  padding-left: 30%;
+  height: 300px;
+}
+
+/*----------- HEADER --------------*/
+
+
+#headerWrapper {
+  width: 100%;
+}
+nav br {
+  display: none;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  float: left;
+  width: 100px;
+}
+nav ul li a {
+  display: block;
+  color: #eee;
+  //border-left: 1px solid #ffffff;
+  padding: .5rem 0;
+  text-decoration: none;
+  font-size: .9rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  //border-left: none;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+  color: #000000;
+  cursor: pointer;
+}
+nav ul li.active a {
+  background-color: #eee;
+  color: #000000;
+}
+

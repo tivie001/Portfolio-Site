@@ -1,0 +1,234 @@
+//.flexed {display: flex; flex-wrap: wrap;} @for $i from 1 through 12 {
+//  $w:($i / 12) * 100%;
+//  .medium-#{$i} {flex-basis: $w; padding: 2vw}
+//} // end loop
+
+
+div#headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e9e9e9;
+}
+.navWrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  background: #BF2A29;
+}
+
+#mobileMenu {
+  display: none;
+}
+#desktopMenu{
+  display: block;
+}
+div#mainWrapper {
+  max-width: 75rem;
+  margin-bottom: 2rem;
+}
+
+/*----------- Lawyer Cards --------------*/
+
+.lawyer-card {
+  background-color: #dbdbdb;
+  grid-column: span 3;
+  height: 105%;
+  text-align: center;
+}
+.lawyer-card-gap {
+  display: none;
+  grid-column: span 3;
+}
+.lawyer-portrait {
+  object-fit: cover;
+}
+.lawyer-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
+  margin-bottom: 2rem;
+}
+button {
+  border-radius: 4px;
+  background-color: #BF2A29;
+  color: white;
+  padding: 10px;
+  margin-top: 1rem;
+  font-size: 12px;
+}
+button:hover {
+  border-radius: 4px;
+  opacity: .2;
+  transition: .2s;
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/*----------- CTA Buttons --------------*/
+.cta-gap {
+  display: none;
+  grid-column: span 1;
+}
+.cta-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
+  margin-bottom: 2rem;
+}
+.cta-btn1 {
+  background-color: #BF2A29;
+  color: white;
+  margin-left: 0;
+  box-shadow: 4px 4px #000000;
+  grid-column: span 4;
+  height: 60px;
+  text-align: center;
+}
+.cta-btn2 {
+  background-color: #BF2A29;
+  color: white;
+  margin-left: 0;
+  box-shadow: 4px 4px #000000;
+  grid-column: span 4;
+  height: 60px;
+  text-align: center;
+}
+
+/*----------- Blog Cards --------------*/
+.blog-gap {
+  display:block;
+  grid-column: span 1;
+}
+.blog-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
+  margin-bottom: 2rem;
+}
+.blog-card {
+  background-color: #dbdbdb;
+  grid-column: span 6;
+  height: 100%;
+}
+.blog-image {
+  height: 200px;
+}
+.blog-card p {
+  font-size: 14px;
+  padding: 0 6px 0 6px;
+
+}
+.blog-card h4 {
+  padding: 6px 6px 0 6px;
+  font-family: "Avenir Next";
+  margin: 0;
+}
+.learn-more-btn  {
+  background-color: #BF2A29;
+  color: white;
+  text-align: center;
+  height: 35px;
+}
+.learn-more-btn p  {
+  padding-top: .6rem;
+}
+
+/*----------- Tip Of the Day Cards --------------*/
+.tip-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 2rem;
+}
+.tip-card {
+  background-color: #dbdbdb;
+  grid-column: span 12;
+  height: 100%;
+}
+.tip-card h4 {
+  margin: 0;
+  padding: 5px 5px 0 5px;
+
+}
+.tip-card p {
+  font-size: 14px;
+  padding: 5px 5px 0 5px;
+}
+.tip-card h6 {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 14px;
+}
+.faq {
+  background-color: #dbdbdb;
+  grid-column: span 4;
+  height: 200px;
+}
+.faq h4 {
+  margin: 0;
+  padding: 5px 5px 0 5px;
+}
+.faq p {
+  font-size: 14px;
+  padding: 5px 5px 0 5px;
+}
+.faq3 {
+  margin-top: 1.9rem;
+}
+.read-more-btn {
+  color: #BF2A29;
+  padding-top: .5rem;
+  text-align: center;
+  height: 35px;
+
+}
+/*----------- END --------------*/
+
+nav {
+  max-width: 75rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-width: 75rem;
+}
+nav ul li {
+  float: left;
+  width: 100px;
+  display: block;
+
+}
+nav ul li a {
+  display: block;
+  color: #eee;
+  border-left: 1px solid #ffffff;
+  padding: .5rem 0;
+  text-decoration: none;
+  font-size: .9rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  border-left: none;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+  color: #000000;
+  cursor: pointer;
+}
+nav ul li.active a {
+  background-color: #eee;
+  color: #000000;
+}
+#hamburger {
+  display: none;
+}
+
+
+
+

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Custom Css -->
+    <link href="../common-stylesheet.css" rel="stylesheet"/>
+
+    <!-- Custom Js -->
+    <script src="../main.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Card Table Example</title>
+</head>
+<body class="noScroll">
+    <div class="fade-in">
+
+        <!-------  Cards Table   ------->
+
+        <div class="col-12" style="padding: 1.5rem 1rem 1rem 1rem">
+            <div class="card highlight">
+                <div class="card-block" style="overflow: hidden">
+                    <div class="flex-to-content" id="headerElement">
+                        <div class="justify-content-edge" id="cardTitleId">
+                            <a href="../subpages/myWork.html" style="text-decoration: none; color: black">
+                                <button type="button" class="btn btn-light">< Back</button>
+                            </a>
+                            <h3 class="card-title mb-0" style="text-align: center; color: #505050; padding-top: 1rem">Cards Data Table Example</h3>
+                            <div></div>
+                        </div>
+                        <div class="justify-content table-search-bar" id="tableSearchId">
+                            <div style="width: 60%; padding: 1.5rem 0 2rem 0">
+                                <input class="form-control modify dark form-border" style="width: 100%; text-align: center" type="text" id="searchBox">
+                                <p class="text mb-0 editFont" style="text-align: center">Search by Name, #, Reload, or Status</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive table-fixed" style="padding: 0 3rem 0 3rem">
+                        <table class="table" style="overflow: scroll">
+                            <tbody>
+                            <tr style="border-bottom: 1px solid #ededed">
+                                <td class="text-uppercase" style="font-weight: bold; width: 17%">Card Name</td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 20%">Card Number</td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 24%">Card Limit</td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 18%">Date Created</td>
+                                <td class="text-uppercase" style="font-weight: bold">Status</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive table-fixed" id="table-scroll" style="height: 425px; overflow:auto; text-align: left">
+                        <table class="table table-striped" style="width: 100%; overflow: scroll" id="cardTable">
+                            <tbody>
+                            <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#fullEditCardModal">
+                                <td></td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 17%"><span @click="">Tyler Ivie</span></td>
+                                <td><span style="color: #949494">xxxx - 1234</span></td>
+                                <td style="width: 23%">$1000.00</td>
+                                <td style="width: 15%" class="text-uppercase">2019-NOV-01</td>
+                                <td class="text-uppercase default-card" style="margin-left: -1em">REQUESTED</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#fullEditCardModal">
+                                <td></td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 17%"><span @click="">SUSAN HOPKINS</span></td>
+                                <td><span style="color: #949494">xxxx - 5678</span></td>
+                                <td style="width: 23%">$601.00</td>
+                                <td style="width: 15%" class="text-uppercase">2019-OCT-20</td>
+                                <td class="text-uppercase activated-card" style="margin-left: -1em">ACTIVATED</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#fullEditCardModal">
+                                <td></td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 17%"><span @click="">LOGAN UIBEL</span></td>
+                                <td><span style="color: #949494">xxxx - 0101</span></td>
+                                <td style="width: 23%">$20000.00</td>
+                                <td style="width: 15%" class="text-uppercase">2019-OCT-19</td>
+                                <td class="text-uppercase activated-card" style="margin-left: -1em">ACTIVATED</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#fullEditCardModal">
+                                <td></td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 17%"><span @click="">MADELYN HONEY</span></td>
+                                <td><span style="color: #949494">xxxx - 6789</span></td>
+                                <td style="width: 23%">$300.00</td>
+                                <td style="width: 15%" class="text-uppercase">2019-JUL-28</td>
+                                <td class="text-uppercase closed-card" style="margin-left: -1em">CLOSED</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#fullEditCardModal">
+                                <td></td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 17%"><span @click="">JOHN DOE</span></td>
+                                <td style="width: 19%"><span style="color: #949494">xxxx - 0900</span></td>
+                                <td style="width: 23%">$555.50</td>
+                                <td style="width: 15%" class="text-uppercase">2019-JUN-01</td>
+                                <td class="text-uppercase activated-card" style="margin-left: -1em">ACTIVATED</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#fullEditCardModal">
+                                <td></td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 17%"><span @click="">Tyler Ivie</span></td>
+                                <td style="width: 19%"><span style="color: #949494">xxxx - 1556</span></td>
+                                <td style="width: 23%">$150.00</td>
+                                <td style="width: 15%" class="text-uppercase">2019-MAY-28</td>
+                                <td class="text-uppercase default-card" style="margin-left: -1em">REQUESTED</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#fullEditCardModal">
+                                <td></td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 17%"><span @click="">EMILY JUMPER</span></td>
+                                <td style="width: 19%"><span style="color: #949494">xxxx - 0001</span></td>
+                                <td style="width: 23%">$100.00</td>
+                                <td style="width: 15%" class="text-uppercase">2018-DEC-25</td>
+                                <td class="text-uppercase closed-card" style="margin-left: -1em">CLOSED</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#fullEditCardModal">
+                                <td></td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 17%"><span @click="">BILLY JEAN</span></td>
+                                <td style="width: 19%"><span style="color: #949494">xxxx - 8899</span></td>
+                                <td style="width: 23%">$2000.00</td>
+                                <td style="width: 15%" class="text-uppercase">2018-NOV-23</td>
+                                <td class="text-uppercase temp-deactivated-card" style="margin-left: -1em">TEMPORARILY DEACTIVATED</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ededed; height: 60px; width: 17%" data-toggle="modal" data-target="#fullEditCardModal">
+                                <td></td>
+                                <td class="text-uppercase" style="font-weight: bold"><span @click="">FRANKIE GODFRIED</span></td>
+                                <td style="width: 19%"><span style="color: #949494">xxxx - 1099</span></td>
+                                <td style="width: 23%">$1050.00</td>
+                                <td style="width: 15%" class="text-uppercase">2018-NOV-2</td>
+                                <td class="text-uppercase temp-deactivated-card" style="margin-left: -1em">TEMPORARILY DEACTIVATED</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ededed; height: 60px; width: 17%" data-toggle="modal" data-target="#fullEditCardModal">
+                                <td></td>
+                                <td class="text-uppercase" style="font-weight: bold"><span @click="">ALLAN POE</span></td>
+                                <td style="width: 19%"><span style="color: #949494">xxxx - 8129</span></td>
+                                <td style="width: 23%">$200.00</td>
+                                <td style="width: 15%" class="text-uppercase">2018-NOV-01</td>
+                                <td class="text-uppercase temp-deactivated-card" style="margin-left: -1em">TEMPORARILY DEACTIVATED</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------   Edit Card Modal   ------->
+
+    <!--<div class="modal fade" id="fullEditCardModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-md-lg" role="document">
+            <div class="modal-content">
+                <div class="card-header justify-content" style="padding-top: 1em; color: #215393">
+                    <h4>Edit Card</h4>
+                </div>
+                <div class="justify-content" id="cardColor" style="height: 150px; width: 450px; margin-left: 5%">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="credit-card"
+                         class="svg-inline&#45;&#45;fa fa-credit-card fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 576 512" width="300px" height="175px">
+                        <path fill="#215393" d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48.1 48h479.8c26.6 0 48.1-21.5 48.1-48V80c0-26.5-21.5-48-48.1-48zM54.1 80h467.8c3.3 0 6 2.7 6 6v42H48.1V86c0-3.3 2.7-6 6-6zm467.8 352H54.1c-3.3 0-6-2.7-6-6V256h479.8v170c0 3.3-2.7 6-6 6zM192 332v40c0 6.6-5.4 12-12 12h-72c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h72c6.6 0 12 5.4 12 12zm192 0v40c0 6.6-5.4 12-12 12H236c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h136c6.6 0 12 5.4 12 12z"></path>
+                    </svg>
+                    <div class="card-name-text" style="margin-left: .5rem"></div>
+                    <div class="card-status-text" style="margin-left: .5rem"></div>
+                    <div class="card-num-text" style="margin-left: .5rem"></div>
+                </div>
+                <div class="col-10" style="padding-bottom: 1rem; margin: 2rem 0 0 9%">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="justify-content" style="color: #215393">
+                                <h5>Card Information</h5>
+                            </div>
+                            <div class="justify-content">
+                                <div class="divider-bottom col-11" style="margin-bottom: 1rem"></div>
+                            </div>
+                            <div class="justify-content-edge">
+                                <div style="padding: 0 .5rem 0 .5rem">
+                                    <div style="width: 100%">
+                                        <input class="form-control modify form-border" style="width: 100%; text-align: center; background-color: white" type="text" placeholder="CHRIS MARTIN">
+                                        <p class="text mb-0 editFont" style="text-align: center">Name of Card</p>
+                                    </div>
+                                </div>
+                                <div class="justify-content-edge">
+                                    <div style="width: 100%; padding: 0 .5rem 0 .5rem">
+                                        <select class="form-control modify form-border add-card-select" id="selectPosition">
+                                            <option value="" selected></option>
+                                            <option>ACTIVATED</option>
+                                            <option>ORDERED</option>
+                                            <option>REQUESTED</option>
+                                            <option>MISSING INFORMATION</option>
+                                            <option>SUSPENDED</option>
+                                            <option>CLOSED</option>
+                                            <option>TEMPORARILY DEACTIVATED</option>
+                                        </select>
+                                        <p class="text mb-0 editFont" style="text-align: center">Card Status</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="justify-content-edge">
+                                <div style="width: 50%; padding: 1rem .5rem 1rem .5rem">
+                                    <div style="position:relative">
+                                        <input class="form-control modify form-border" style="width: 100%; text-align: center" type="text" maxlength="4" placeholder="XXXX">
+                                    </div>
+                                    <p class="text mb-0 editFont" style="text-align: center">Card Number</p>
+                                </div>
+                                <div style="">
+                                    <div style="width: 100%; padding: 1rem .5rem 1rem .5rem">
+                                        <input class="form-control modify form-border" style="width: 100%; text-align: center" type="number" step="0.1" placeholder="0.00">
+                                        <p class="text mb-0 editFont" style="text-align: center">Monthly Auto Reload</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer" style="background-color: white">
+                    <div style="text-align: center">
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal" style="margin-right: 1rem">CANCEL</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">SAVE CHANGES</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</body>
+<script>
+    $(document).ready(function(){
+        $("#searchBox").on("keyup", function() {
+            let value = $(this).val().toLowerCase();
+            $("#cardTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+</script>
+</html>
+
+<style>
+
+    td {
+        padding-top: 1.3em;
+        whitespace: nowrap;
+    }
+    .default-card {
+        color: #2a72c6;
+    }
+    .activated-card {
+        color: #21bf2e;
+    }
+    .closed-card {
+        color: #ec130f;
+    }
+    .temp-deactivated-card {
+        color: #ea7f11;
+    }
+    .justify-content {
+        display: flex;
+        justify-content: space-around;
+    }
+    .justify-content-edge {
+        display: flex;
+        justify-content: space-between;
+    }
+    body.noScroll {
+        overflow: hidden;
+    }
+    select {
+        text-align: center;
+        text-align-last: center;
+    }
+    option {
+        text-align: left;
+    }
+    .editFont {
+        font-size: 12px;
+    }
+
+</style>

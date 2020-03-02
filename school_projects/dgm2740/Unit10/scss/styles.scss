@@ -1,0 +1,106 @@
+/* --- RUN THIS COMMAND --> sass --watch scss/styles.scss css/styles.css */
+
+@import "normalize";
+
+@import "small";
+@import "MobileMenu";
+
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media only screen and (min-width: 35rem) {
+    @import "medium";
+} /* end of media query */
+
+@media only screen and (min-width: 60rem) {
+    @import "large";
+}
+/* end of media query */
+
+#mainWrapper {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*----------- HEADER --------------*/
+
+#logo {
+    height: 80px;
+    width: 90px;
+    float: left;
+    margin-right: 1rem;
+}
+
+/*----------- NAVIGATION --------------*/
+
+
+/*----------- BODY --------------*/
+#thanksWrapper {
+    text-align: center;
+}
+#thanksWrapper h2{
+    color: #ff4500;
+}
+#colorHeader {
+    font-family: Avenir;
+    font-size: 16px;
+    margin: 0;
+}
+#color {
+    margin-left: 0;
+}
+h3 {
+    padding-left: 15px;
+}
+.infoCard {
+    margin-bottom: 2rem;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 10px;
+}
+select {
+    margin: 15px;
+    width: 20%;
+    font-size: 16px;
+    height: 45px;
+    background-color: #FFFFFF;
+    appearance: none;
+}
+input.invalidErrors {
+    outline: none;
+    border-color: red;
+    border-width: 1px;
+    border-style: solid;
+
+    &:valid {
+        border-style: auto;
+        border-color: inherit;
+    }
+}
+
+/*----------- Footer --------------*/
+
+footer {
+    background-color: #ff4500;
+    padding: .5rem 2%;
+    color: #FFFFFF;
+    text-align: center;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

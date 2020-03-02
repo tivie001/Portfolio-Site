@@ -1,0 +1,54 @@
+/* Prevent adjustments of font size when orientation changes  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*----------- NAVIGATION --------------*/
+div#navWrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+    background: #d7915e;
+}
+div#mainWrapper {
+
+}
+#scaledImage {
+    width: 100%;
+    padding-bottom: 10px;
+}
+/*----------- NAVIGATION --------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d7915e;
+}
+
+li {
+    float: left;
+    width: 25%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav ul li:first-child a {
+    border-left: none;
+}
+
+nav ul li a:hover {
+    background-color: #eee;
+    color: #333;
+}
+nav ul li.active a {
+    background-color: #eee;
+    color: #000;
+}

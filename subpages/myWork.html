@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Custom Css -->
+    <link href="../css/common-stylesheet.css" rel="stylesheet"/>
+    <link href="../css/normalize.css" rel="stylesheet"/>
+    <link href="../css/work.css" rel="stylesheet"/>
+
+    <!-- Custom Js -->
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/work.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Ivie Design - My Work</title>
+
+</head>
+
+<!-- ************* MAIN HTML *************-->
+
+<body id="content">
+    <div class="d-block d-sm-none d-none d-md-block d-lg-none">
+        <div class="fixed-top navbar-default mobileNav" style="padding: 1.3rem 0 0 .5rem">
+            <div id="mySidenav" class="sidenav" style="background-color: #efefef; color: grey">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="text-decoration: none">&times;</a>
+                <a onclick="closeNav(); goToHome()">Home</a>
+                <a onclick="closeNav(); goToHome()">About Me</a>
+                <a onclick="closeNav()">My Work</a>
+                <a onclick="closeNav(); goToHome()">Contact Me</a>
+            </div>
+            <div id="hamIcon" style="font-size:30px; cursor:pointer; padding-left: 1rem; color: #83897f" onclick="openNav()">&#9776;</div>
+        </div>
+    </div>
+    <div class="d-none d-lg-block d-xl-none d-none d-xl-block">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-default fixed-top" id="mainNav" style="padding-top: 1rem">
+            <span>
+                <a href="../index.html"><img class="nav-icon" src="../assets/logoV1.png"></a>
+            </span>
+            <div class="collapse navbar-collapse d-none d-sm-block">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-text" onclick="goToHome()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-text" onclick="goToHome()">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-text">My Work</a>
+                    </li>
+                    <li class="nav-item" id="link">
+                        <a class="nav-text" onclick="goToHome()" style="border: 2px solid grey; padding: 5px">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="main-body container-fluid">
+        <div class="col-lg-12 col-md-10">
+            <div class="d-flex justify-content-start">
+                <h1 class="mb-0">My Projects</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row justify-content" style="margin: 0 1rem 0 0">
+            <div class="col-sm col-md-6 col-lg-3 pr-0 pl-3 pb-1">
+                <div class="card-item">
+                    <img class="work-image" src="../assets/moab-project.png">
+                    <div class="card-item-overlay">
+                        <div class="overlay-title">Moab Arches National Park</div>
+                        <div class="overlay-sub-title">Travel Website</div>
+                        <div class="view-btn" id="moabSite" onclick="openProjects(this.id)">View<i class="fas fa-arrow-circle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm col-md-6 col-lg-3 pr-0 pl-3 pb-1">
+                <div class="card-item">
+                    <img class="work-image" src="../assets/marketing-website.png">
+                    <div class="card-item-overlay">
+                        <div class="overlay-title">Cozy Corner Book Store</div>
+                        <div class="overlay-sub-title">Marketing Website</div>
+                        <div class="view-btn" id="cozyCornerSite" onclick="openProjects(this.id)">View<i class="fas fa-arrow-circle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm col-md-6 col-lg-3 pr-0 pl-3 pb-1">
+                <div class="card-item">
+                    <img class="work-image" src="../assets/italia-website.png">
+                    <div class="card-item-overlay">
+                        <div class="overlay-title">Italia</div>
+                        <div class="overlay-sub-title">Travel Blog/Site</div>
+                        <div class="view-btn" id="italiaSite" onclick="openProjects(this.id)">View<i class="fas fa-arrow-circle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm col-md-6 col-lg-3 pr-0 pl-3 pb-1">
+                <div class="card-item">
+                    <img class="work-image" src="../assets/cards-example.png">
+                    <div class="card-item-overlay">
+                        <div class="overlay-title">Card Table</div>
+                        <div class="overlay-sub-title">Example Bootstrap Data Table</div>
+                        <div class="view-btn" id="cardsExample" onclick="openProjects(this.id)">View<i class="fas fa-arrow-circle-right"></i></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm col-md-6 col-lg-3 pr-0 pl-3 pb-1">
+                <div class="card-item">
+                    <img class="work-image" src="../assets/website_design_preview.png">
+                    <div class="card-item-overlay">
+                        <div class="overlay-title">Loveland Planet Aquarium</div>
+                        <div class="overlay-sub-title">Design Guide</div>
+                        <div class="view-btn" data-toggle="modal" data-target="#aquariumModal">View<i class="fas fa-arrow-circle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm col-md-6 col-lg-3 pr-0 pl-3 pb-1">
+                <div class="card-item" style="box-shadow: none">
+                    <div class="d-flex justify-content-center more-message">
+                        <h4>More Projects Coming Soon!</h4>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <i class="fas fa-gift" id="present-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ************* Footer *************-->
+    <div style="position: fixed; left: 0; bottom: 0; background-color: #f8f9fa; width: 100%">
+        <div style="height: 20px; padding: 15px; font-variant: all-petite-caps; font-family: Avenir">
+            <a href="https://www.facebook.com/Ivie-Design-Web-Graphics-609189572911773/?modal=admin_todo_tour" target=”_blank”>
+                <i class="fab fa-facebook-square social-media-icons" id="facebook-icon"></i>
+            </a>
+            <a href="https://www.instagram.com/ivie_design/" target=”_blank”>
+                <i class="fab fa-instagram social-media-icons" id="insta-icon"></i>
+            </a>
+            <a href="https://twitter.com/home" target=”_blank”>
+                <i class="fab fa-twitter social-media-icons" id="twitter-icon"></i>
+            </a>
+            <a href="https://www.pinterest.com/ivie1882/overview/" target=”_blank”>
+                <i class="fab fa-pinterest-square social-media-icons" id="pinterest-icon"></i>
+            </a>
+            <p class="footer-links" onclick="goToHome()">About Me</p>
+            <p class="footer-links" onclick="goToHome()">Home</p>
+        </div>
+    </div>
+
+    <!-- ************* IMAGE PREVIEWS (Modals) *************-->
+    <div class="modal fade" id="aquariumModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <embed src="../assets/Aquarium-Project.pdf" frameborder="0" width="100%" height="500px">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+    });
+    $(window).scroll(function(){
+        $('.mobileNav').toggleClass('scrolled', $(this).scrollTop() > 50);
+    });
+    $(window).scroll(function(){
+        $('#hamIcon').toggleClass('scrolled', $(this).scrollTop() > 50);
+    });
+</script>

@@ -1,0 +1,109 @@
+/* --- RUN THIS COMMAND --> sass --watch scss/styles.scss css/styles.css */
+
+@import "normalize";
+
+@import "small";
+
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media only screen and (max-width: 30rem) {
+    @import "small";
+
+} /* end of media query */
+
+@media only screen and (min-width: 35rem) {
+    @import "medium";
+
+} /* end of media query */
+
+@media only screen and (min-width: 64rem) {
+    @import "large";
+}
+/* end of media query */
+
+#logo {
+    height: 60px;
+    width: 90px;
+    float: left;
+    margin-right: 1rem;
+}
+
+#heroImage {
+    max-width: 75rem;
+    width: 100%;
+    height: 301px;
+}
+
+#inventoryWrapper {
+    width: 100%;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+}
+figure {
+    margin: 0 1rem 0 1rem;
+}
+.below {
+    margin: 0 1rem 0 1rem;
+
+}
+
+
+/*----------- HEADER --------------*/
+
+header {
+    background-color: #cfab7d;
+}
+header h1 {
+    margin: 0;
+}
+header h3 {
+    margin: 0;
+    padding: 0 0 1rem 1rem;
+    font-weight: 100;
+    display: none;
+}
+#coSlogan {
+    font-size: 25px;
+    font-family: "Avenir";
+    font-weight: 500;
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.mainHeader {
+    font-family: 'Acme', sans-serif;
+    margin: 0;
+    padding: 1rem 0 0 1rem;
+    font-size: 50px;
+    text-shadow: 2px 2px #806142;
+}
+.subHeader {
+    font-family: 'Acme', sans-serif;
+    height: 55px;
+    margin-top: 0;
+    padding: 1rem 0 .5rem 1rem;
+}
+.sectionSpacing {
+    padding-bottom: 6rem;
+}
+nav ul li.active  {
+    background-color: rgba(5, 5, 5, 0.3);
+    color: #FFFFFF;
+}

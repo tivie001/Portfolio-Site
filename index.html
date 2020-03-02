@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Custom Css -->
+    <link href="css/common-stylesheet.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/normalize.css" rel="stylesheet"/>
+
+    <!-- Custom Js -->
+    <script src="scripts/main.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Ivie Design - Web & Graphics</title>
+
+</head>
+
+<!-- ************* MAIN HTML *************-->
+
+<body id="content">
+    <div class="container-fluid">
+        <div class="main-card">
+            <div class="d-block d-sm-none d-none d-md-block d-lg-none">
+                <div class="fixed-top navbar-default mobileNav" style="padding: 1.3rem 0 0 .5rem">
+                    <div id="mySidenav" class="sidenav" style="background-color: #efefef; color: grey">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="text-decoration: none">&times;</a>
+                        <a onclick="closeNav(); scrollToAboutMeMobile()">About Me</a>
+                        <a onclick="closeNav(); myWorkPage()">My Work</a>
+                        <a onclick="closeNav(); scrollToContact()">Contact Me</a>
+                    </div>
+                    <div id="hamIcon" style="font-size:30px; cursor:pointer; padding-left: 1rem; color: #83897f" onclick="openNav()">&#9776;</div>
+                </div>
+            </div>
+            <div class="main-card-text">
+                <h1 class="header-text d-flex justify-content-center">IVIE DESIGN</h1>
+                <h1 class="subheader-text d-flex justify-content-center">WEB & GRAPHICS</h1>
+            </div>
+            <div class="d-none d-lg-block d-xl-none d-none d-xl-block">
+                <nav class="navbar navbar-expand-lg navbar-light navbar-default fixed-top" id="mainNav">
+                    <span>
+                        <a href="index.html"><img class="nav-icon" src="assets/logoV1.png"></a>
+                    </span>
+                    <div class="collapse navbar-collapse d-none d-sm-block">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-text" onclick="scrollToAboutMe()">About Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-text" href="subpages/myWork.html">My Work</a>
+                            </li>
+                            <li class="nav-item" id="link">
+                                <a class="nav-text" style="border: 2px solid grey; padding: 5px" onclick="scrollToContact()">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="secondary-card">
+        <div class="text-xl-center">
+            <h1 class="card-headers">MY WORK</h1>
+        </div>
+        <div class="d-flex justify-content-center row">
+            <div class="work-item">
+                <a href="school_projects/dgm2341/main.html" target="_blank" style="text-decoration: none">
+                    <img class="work-image" src="assets/moab-project.png">
+                    <div class="work-image-text">
+                        <p>Click here to see a school project using CSS & Javascript to design & develop travel website.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="work_projects/cards.html" target="_blank" style="text-decoration: none">
+                    <img class="work-image" src="assets/cards-example.png">
+                    <div class="work-image-text">
+                        <p>Click here to see a work project example of a data table for admins to view and manage member cards.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="school_projects/dgm2780/marketing-website/website/index.html" target="_blank" style="text-decoration: none">
+                    <img class="work-image" src="assets/marketing-website.png">
+                    <div class="work-image-text">
+                        <p>
+                            Click here to see a marketing site that I created for an assignment I did in school for a bookstore!
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="work-item" data-toggle="modal" data-target="#aquariumModal">
+                <img class="work-image" src="assets/website_design_preview.png">
+                <div class="work-image-text">
+                    <p>A school project where I redesigned a website for a Non-Profit Org. in wireframes and mock-ups.</p>
+                </div>
+            </div>
+        </div>
+        <a class="d-flex justify-content-center" style="text-decoration: none" href="subpages/myWork.html">
+            <p class="seeMoreText">See More +</p>
+        </a>
+    </div>
+    <div class="third-card">
+        <div class="row">
+            <div class="col-lg-5 col-sm-12">
+                <img src="assets/cropped-portrait.jpg" class="portrait-image">
+            </div>
+            <div class="col-lg-7 col-sm-12 align-self-center">
+                <div class="">
+                    <h1 class="card-headers">ABOUT ME</h1>
+                    <div class="portrait-text">
+                        <p>Hi. My name is Tyler Ivie. I am currently working on developing software for a local start-up and I really enjoy it.
+                            I am learning to use the technologies I have used in this employment to be able to develop and design a web page for you soon.
+                            Feel free to look around, check out my resume, look at some designs I have done in work and on the side! Enter your information below if you have
+                            any questions about what I do and what I can do for you! Thanks for visiting!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="fourth-card">
+        <div class="row">
+            <div class="col-12 contact-form">
+                <div class="powr-form-builder" id="f18dc429_1572406203"></div><script src="https://www.powr.io/powr.js?platform=embed"></script>            </div>
+        </div>
+    </div>
+    <div class="footer-style">
+        <a href="https://www.facebook.com/Ivie-Design-Web-Graphics-609189572911773/?modal=admin_todo_tour" target=”_blank”>
+            <i class="fab fa-facebook-square social-media-icons" id="facebook-icon"></i>
+        </a>
+        <a href="https://www.instagram.com/ivie_design/" target=”_blank”>
+            <i class="fab fa-instagram social-media-icons" id="insta-icon"></i>
+        </a>
+        <a href="https://twitter.com/home" target=”_blank”>
+            <i class="fab fa-twitter social-media-icons" id="twitter-icon"></i>
+        </a>
+        <a href="https://www.pinterest.com/ivie1882/overview/" target=”_blank”>
+            <i class="fab fa-pinterest-square social-media-icons" id="pinterest-icon"></i>
+        </a>
+        <p class="footer-links d-none d-sm-block" onclick="scrollToAboutMe()">About Me</p>
+        <p class="footer-links" onclick="myWorkPage()">More of My Work</p>
+    </div>
+
+
+    <!-- ************* IMAGE PREVIEWS (Modals) *************-->
+
+    <div class="modal fade" id="aquariumModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <embed src="assets/Aquarium-Project.pdf" frameborder="0" width="100%" height="500px">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+    });
+    $(window).scroll(function(){
+        $('.mobileNav').toggleClass('scrolled', $(this).scrollTop() > 50);
+    });
+    $(window).scroll(function(){
+        $('#hamIcon').toggleClass('scrolled', $(this).scrollTop() > 50);
+    });
+</script>

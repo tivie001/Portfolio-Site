@@ -1,0 +1,228 @@
+/* Prevent adjustments of font size when orientation changes  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*----- NAVIGATION -----*/
+
+nav ul.hide {
+    display: none;
+}
+nav br {
+    display: block;
+}
+.navWrapper {
+    background: #002f54;
+}
+nav #hamburgerBtn {
+    margin: .2rem 2%;
+    background-color: rgba(193, 221, 255, 0.51);
+    border: none;
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 2px;
+    float: left;
+}
+nav {
+    overflow: hidden;
+    background-color: #002f54;
+    position: relative;
+    margin-bottom: 5vh;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.4);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li a {
+    display: block;
+    padding: .8rem 2%;
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    width: 100%;
+    border-radius: 4px;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #dbdbdb;
+    color: #000000;
+}
+
+nav ul li.active a {
+    background-color: #dbdbdb;
+    color: #000000;
+}
+nav {
+    width: 100%;
+}
+
+.search-container {
+    padding: 10px 4px;
+    width: 100%;
+    float: left;
+}
+.search-container form {
+    width: 100%;
+    padding-right: 0;
+}
+input[type=search] {
+    padding: 6px 6px 6px 1rem;
+    font-size: 17px;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    float: left;
+}
+
+button[type=submit] {
+    padding: 6px 10px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 15px 15px 0;
+}
+
+/*----------- BODY --------------*/
+
+/*--------- index ---------*/
+
+.sliderImage {
+    object-fit: cover;
+    height: 400px;
+    max-height: 350px;
+    border-radius: 8px;
+}
+.news-card-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    margin-bottom: 2rem;
+}
+.news-card {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+}
+.news-img {
+    height: 250px;
+    border-radius: 7px 7px 7px 7px;
+    object-fit:cover;
+    opacity: .75;
+    z-index: 0;
+    transition: .75s ease;
+}
+.news-card-text-top {
+    color: white;
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: -2.25rem;
+    z-index: 1;
+    border-radius: 7px 7px 0 0;
+    padding: 10px 10px;
+    background-color: rgba(128, 128, 128, 0.76);
+}
+.news-card-text-bottom {
+    color: white;
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: auto;
+    z-index: 1;
+    border-radius: 0 0 7px 7px;
+    margin-top: -2.2rem;
+    padding: 10px 10px;
+    background-color: rgba(128, 128, 128, 0.76);
+}
+.news-img:hover {
+    opacity: 1;
+    transition: .75s ease;
+    cursor: pointer;
+}
+
+/*--------- cruises ---------*/
+
+.cruises-grid-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    margin-bottom: 2rem;
+}
+.cruise-grid-img {
+    grid-column: span 12;
+}
+.cruise-img {
+    height: 300px;
+    width: 100%;
+}
+.cruise-descrip {
+    text-align: left;
+    grid-column: span 12;
+    height: 250px;
+}
+.cruise-descrip h1 {
+    margin: 0 0 1rem 0;
+}
+.read-more-btn {
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    width: 100%;
+    float: right;
+    background-color: #002f54;
+}
+
+/*----------- Footer --------------*/
+
+#largeFooter {
+    font-family: "Avenir Next";
+    max-width: 100%;
+    text-align: justify;
+    background-color: #eeeeee;
+    padding-top: .5rem;
+    margin-top: 3rem;
+}
+#footerWrapper {
+    max-width: 75rem;
+    background-color: #eeeeee;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    margin: 0 5px 0 5px;
+}
+.footer-column {
+    grid-column: span 12;
+    height: 350px;
+}
+#customFooterHeight {
+    height: 180px;
+}
+#subscribeEmail {
+    height: 20%;
+    width: 70%;
+    padding-left: .5rem;
+}
+#subscribeBtn {
+    margin: 1rem 9rem 0 0;
+    width: 50%;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+}

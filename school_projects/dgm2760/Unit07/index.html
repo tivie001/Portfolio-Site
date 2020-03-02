@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>07 Pizza Emporium</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="hideOutput()">
+	<h1 id="coName" class="header" style="margin-top: 0em" ><div id="header-text">Pizza Emporium</div></h1>
+	<h2 id="slogan" class="header" style="color: white; margin: -9rem 0 0 2rem">Pizza autentica dall'italia!</h2>
+	<h1 style="margin-top: -3rem; color: gold; font-family: Arial Black; text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black">Mario's Pizza</h1>
+	<h2 style="margin-top: 0rem; color: grey">What I learned</h2>
+	<ul>
+		<li>How to create an object.</li>
+		<li>How to set dynamic key value pairs to object.</li>
+		<li>How to get input from user and display it.</li>
+		<li>How to call dynamically the pizza and its ingredients.</li>
+	</ul>
+	<table style="width: 130%; text-align: left; margin-left: .5rem">
+	  <tr>
+	    <th style="font-size: 25px; color: maroon">Crust Options</th>
+	  </tr>
+	</table>
+	<div class="row" style="width: 100%; background-color: #f2e2c1">
+		<div class="column" style="margin-right: 12rem">
+			<button class="button-style" onclick="pizza.type = 'thin'">THIN CRUST</button>
+			<button class="button-style" onclick="pizza.type = 'thick'">THICK CRUST</button>
+			<h2 style="margin-top: 0rem; color: maroon">Topping Options</h2>
+			<button class="button-style" onclick="pizza.topping = 'sausage'">SAUSAGE</button>
+			<button class="button-style" onclick="pizza.topping = 'pepperoni'">PEPPERONI</button>
+			<h2 style="margin-top: 0rem; color: maroon">Size Options</h2>
+			<button class="button-style" onclick="pizza.size = 'small'">SMALL</button>
+			<button class="button-style" onclick="pizza.size = 'large'">LARGE</button>
+			<h2 style="margin-top: 0rem; color: maroon">Time to Eat</h2>
+			<button class="button-style" onclick="pizza.setPizzaProps()">BUILD PIZZA</button>
+			<h2 style="margin-top: 0rem; color: maroon">Shopping List</h2>
+			<button class="button-style" onclick="pizza.setIngredientsProps()">CREATE SHOPPING LIST</button>
+		</div>
+		<h1 class="column" id="oven">
+			<span style="color: maroon; font-size: 20px">Your Pizza in the oven:</span><br>Baking a <span id="size" style="color: #cec216"></span> pizza on a <span id="type" style="text-decoration: underline"></span> crust with <span id="topping" style="color: maroon"></span> and cheese that's coming right up!
+		</h1>
+		<div id="cart">
+			<h1 class="column">
+				<span style="color: maroon; font-size: 20px">Ingredients needed:</span><br>You'll need to purchase <span id="flour"></span> of flour and 1lb. of <span id="toppings" style="color: maroon"></span>.
+			</h1>
+		</div>
+	</div>
+	<div>
+	</div>
+	<footer class=footer>Unit 07 - Pizza Emporium by Tyler Ivie</footer>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+</html>

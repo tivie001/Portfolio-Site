@@ -1,0 +1,194 @@
+/* --- RUN THIS COMMAND --> sass --watch scss/styles.scss css/styles.css */
+
+@import "normalize";
+
+@import "small";
+
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media only screen and (max-width: 30rem) {
+    @import "small";
+
+} /* end of media query */
+
+@media only screen and (min-width: 35rem) {
+    @import "medium";
+
+} /* end of media query */
+
+@media only screen and (min-width: 64rem) {
+    @import "large";
+}
+/* end of media query */
+
+.mainWrapper {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    background-color: #F0D43A;
+    color: #3C4B6C;
+}
+header h1, h3 {
+    margin: 0;
+}
+#headerWrapper {
+    max-width: 64rem;
+    margin: 0 auto;
+    height: 100%;
+    background-color: #F0D43A;
+    position: relative;
+}
+#headerImage {
+    opacity: .5;
+}
+#logo {
+    height: 70px;
+    width: 90px;
+    float: left;
+    margin-right: 1rem;
+}
+#coSlogan {
+    text-shadow: .5px .5px black;
+}
+.mainHeaders {
+    font-family: 'Courgette', cursive;
+    font-size: 3rem;
+    text-shadow: 2px 2px black;
+}
+figure {
+    margin: 0;
+}
+/*----------- NAVIGATION --------------*/
+#navWrapper {
+    max-width: 64rem;
+    margin: 0 auto;
+    background-color: #f03a71;
+    text-align: center;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+}
+.mainWrapper {
+    max-width: 64rem;
+    height: 100%;
+}
+main p {
+    padding: 0 2% 0 2%;
+}
+.sliderImage {
+    object-fit: cover;
+    height: 60vh;
+    width: 100%;
+    border-radius: 2px;
+}
+.pageHeader {
+    font-family: 'Courgette', cursive;
+    margin: 0;
+    color: #3C4B6C;
+}
+#cardGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1rem;
+}
+#card1 {
+    background-color: #3aaaf0;
+}
+#card2 {
+    background-color: #f03a71;
+}
+
+#card3 {
+    background-color: #f0d43a;
+}
+
+#card4 {
+    background-color: #578d86;
+}
+.image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .8s ease;
+}
+.card:hover .image-overlay {
+    opacity: 1;
+    transition: .8s ease;
+    cursor: pointer;
+}
+.card:hover .text-layer {
+    opacity: 1;
+    text-shadow: 2px 2px #000000;
+    transition: .8s ease;
+    cursor: pointer;
+}
+.card-text {
+    position: relative;
+    text-align: center;
+    padding-top: 6.5rem;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Avenir Next";
+    color: #FFFFFF;
+}
+.text-layer {
+    text-align: center;
+}
+.icons {
+    font-size: 3rem;
+    position: absolute;
+    top: 30%;
+    right: 42%;
+    color: #FFFFFF;
+}
+#galleryImages {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+#thanksWrapper {
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+/*----------- Footer --------------*/
+
+footer {
+    background-color: #f03a71;
+    padding: .5rem 2%;
+    color: #FFFFFF;
+    text-align: center;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

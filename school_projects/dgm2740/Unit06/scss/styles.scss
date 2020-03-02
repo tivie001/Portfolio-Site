@@ -1,0 +1,151 @@
+/* --- RUN THIS COMMAND --> sass --watch scss/styles.scss css/styles.css */
+
+@import "normalize";
+
+@import "small";
+
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media only screen and (max-width: 30rem) {
+    @import "small";
+
+} /* end of media query */
+
+@media only screen and (min-width: 35rem) {
+    @import "medium";
+
+} /* end of media query */
+
+@media only screen and (min-width: 64rem) {
+    @import "large";
+}
+/* end of media query */
+
+div#headerWrapper {
+    max-width: 75rem;
+}
+
+div#mainWrapper {
+    max-width: 75rem;
+    margin-bottom: 2rem;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    max-width: 75rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+main p {
+    padding: 0 2% 0 2%;
+}
+
+#heroImage {
+    max-width: 75rem;
+    width: 100%;
+}
+
+.portrait-images {
+    clip-path: circle(40%);
+    width: 150px;
+    height: 200px;
+    float: right;
+}
+.portrait-images2 {
+    clip-path: circle(40%);
+    width: 150px;
+    height: 200px;
+    float: right;
+}
+.footer {
+    height: 30px;
+    background-color: rgba(0, 128, 0, 0.5);
+}
+.text {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial;
+}
+.band-pics {
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    background-color: #e9e9e9;
+}
+header h1 {
+    margin: 0;
+}
+header h2 {
+    margin: 0;
+    font-weight: 100;
+    display: none;
+}
+figure{
+    margin: 0;
+}
+#coSlogan {
+    display: block;
+    font-size: 20px;
+}
+.sub-header {
+    color: #ff4914;
+}
+
+
+/*----------- NAVIGATION --------------*/
+div#navWrapper {
+    max-width: 75rem;
+}
+
+#scaledImage {
+    float: right;
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: #ddd;
+    padding: .5rem 2%;
+    text-align: center;
+    //position: fixed;
+    //right: 0;
+    //bottom: 0;
+    //left: 0;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mainHeaders {
+    font-family: 'Supermercado One', cursive;
+    font-size: 50px;
+    color: #496DDB;
+}

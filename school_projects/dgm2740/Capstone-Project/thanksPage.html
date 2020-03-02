@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fill Me In">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Capstone Project</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="headerWrapper">
+    <header class="clearfix">
+        <figure class="logo">
+            <img id="logo"
+                 alt="logo"
+                 src="images/logo.png"
+                 srcset="images/logo1x.png 1x,
+                             images/logo2x.png 2x,
+                             images/logo3x.png 3x">
+        </figure>
+        <h1 class="mainHeaders">Italia</h1>
+        <h3 id="coSlogan">Segui il tuo corso, e lascia dir genti.</h3>
+    </header>
+</div>
+<div id="navWrapper">
+    <nav>
+        <button onclick="expandMenu()">&#9776;</button>
+        <ul id="navElements" class="hide">
+            <br>
+            <br>
+            <li><a href="index.html">Home</a></li>
+            <li><a>Visit</a></li>
+            <li><a>Sites</a></li>
+            <li><a>News</a></li>
+            <li><a>Contact</a></li>
+            <li><a>About</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="thanksWrapper">
+    <h1>THANK YOU FOR YOUR ORDER!</h1>
+    <h2>Return home, or you will be redirected back to home in 5 seconds...</h2>
+</div>
+<div id="footerWrapper">
+    <footer>
+        DGM 2740 &bull; Capstone Project &copy; Tyler Ivie
+    </footer>
+</div>
+<script>
+    function expandMenu() {
+        document.getElementById("navElements").classList.toggle("hide");
+    }
+    window.onload = function () {
+        setTimeout(function(){ window.location.href = "index.html";}, 5000);
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+/* ---------- NAVBAR ----------*/
+
+.navbar-default{
+    transition:500ms ease;
+    background:transparent;
+    padding: 1.5rem 1.5rem;
+}
+.navbar-default.scrolled{
+    background-color: #f7f7f7;
+}
+.nav-text {
+    font-family: Avenir;
+    font-size: 20px;
+    font-variant: all-petite-caps;
+    opacity: 1;
+    text-decoration: none;
+    color:rgb(33, 37, 41);
+    transition: opacity .5s ease;
+}
+.nav-text:hover {
+    font-family: Avenir;
+    font-size: 20px;
+    font-variant: all-petite-caps;
+    opacity: .5;
+    transition: opacity .5s ease;
+    cursor: pointer;
+    color: grey;
+    text-decoration: none;
+}
+.nav-item {
+    padding: 0 17px 0 17px;
+}
+#mainNav {
+    height: 100px;
+}
+
+
+/* ---------- MAIN BODY ----------*/
+
+/*----- First Section Styles -----*/
+
+.main-card {
+    font-family: 'Avenir';
+    background: url("../assets/plant-background.png"), url("../assets/textured-bg.png");
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 110% 160%, 110% 120%;
+    height: 600px;
+    width: 100%;
+    /*margin: 1rem;*/
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-text {
+    font-size: 80px;
+    color: #484848;
+    letter-spacing: 5px;
+}
+.subheader-text {
+    font-size: 30px; color: grey;
+    letter-spacing: 5px;
+    font-weight: lighter;
+}
+.card-headers {
+    font-size: 32px;
+    padding-top: 2rem;
+    padding-bottom: .5rem;
+    color: #484848;
+    text-align: center;
+}
+@media only screen and (max-width: 35rem) {
+    .header-text {
+        font-size: 40px;
+    }
+    .subheader-text {
+        font-size: 20px;
+    }
+    .card-headers {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+    .main-card {
+        height: 300px;
+    }
+}
+
+/*----- Second Section Styles -----*/
+
+.secondary-card {
+    font-family: 'Avenir';
+    background-color: #F2F4F1;
+    height: 700px;
+    margin-top: 1.5rem;
+}
+
+/*----- Third Section Styles -----*/
+
+.third-card {
+    background-color: #ffffff;
+    height: 500px;
+}
+.portrait-text {
+    font-family: Avenir;
+    padding: 0 6rem 0 6rem;
+    text-align: justify;
+    line-height: 35px
+}
+input, textarea {
+    border: 1px solid #808080;
+    font-size: 12px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+a {
+    color: inherit;
+}
+
+/*----- Fourth Section Styles -----*/
+
+.fourth-card {
+    background-color: #F2F4F1;
+    height: 600px;
+}
+
+/*----- IMAGE GALLERY CSS -----*/
+
+.work-item {
+    margin: 1rem;
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    height: 375px;
+    width: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.work-image {
+    display: block;
+    height: 225px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+}
+.work-image:hover {
+    transform: scale(1.10);
+    cursor: pointer;
+}
+.work-image-text {
+    background-color: white;
+    height: 100%;
+    text-align: center;
+    font-family: Avenir;
+    color: grey;
+    font-size: 14px;
+    padding: 3rem 2rem 0 2rem;
+}
+
+.seeMoreText {
+    font-family: 'Avenir';
+    font-size: 20px;
+    color: grey;
+    text-align: center;
+    padding-top: 1rem;
+    opacity: 1;
+    transition: .5s ease;
+}
+.seeMoreText:hover {
+    opacity: .5;
+    transition: .5s ease;
+}
+
+.contact-form {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media only screen and (min-width: 65rem) {
+    .portrait-image {
+        height: 500px;
+        width: 575px;
+    }
+}
+
+/*----- Media Queries -----*/
+
+@media only screen and (min-width: 30rem) and (max-width: 65rem) {
+    .secondary-card {
+        height: 1000px;
+    }
+    .third-card {
+        height: 600px;
+    }
+    .portrait-image {
+        padding-top: 2rem;
+        height: 325px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .portrait-header {
+        font-family: 'Georgia';
+        font-size: 25px;
+        color: grey;
+        text-align: center;
+        padding-top: 1rem;
+    }
+    .portrait-text {
+        font-family: Avenir;
+        line-height: 25px;
+        padding: 0 1rem 0 1rem;
+        text-align: left
+    }
+    .footer-style {
+        height: 20px;
+        padding: 15px;
+        margin-bottom: 1rem;
+        font-variant: all-petite-caps;
+        font-family: Avenir
+    }
+    .navbar-default{
+        transition:500ms ease;
+        background:transparent;
+    }
+    .mobileNav.scrolled{
+        background-color: #f7f7f7;
+    }
+    #hamIcon.scrolled {
+        margin-top: 1rem;
+    }
+    .old-nav-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 30rem) {
+    .secondary-card {
+        height: 1800px;
+    }
+    .third-card {
+        height: 700px;
+    }
+    .portrait-image {
+        height: 325px;
+        width: 100%;
+    }
+    .portrait-header {
+        font-family: 'Georgia';
+        font-size: 25px;
+        color: grey;
+        text-align: center;
+        padding-top: 1rem;
+    }
+    .portrait-text {
+        font-family: Avenir;
+        line-height: 25px;
+        padding: 0 1rem 0 1rem;
+        text-align: left
+    }
+    .footer-style {
+        height: 20px;
+        padding: 15px;
+        margin-bottom: 1rem;
+        font-variant: all-petite-caps;
+        font-family: Avenir
+    }
+    .navbar-default{
+        transition:500ms ease;
+        background:transparent;
+    }
+    .mobileNav.scrolled{
+        background-color: #f7f7f7;
+    }
+    #hamIcon.scrolled {
+        margin-top: 1rem;
+    }
+    .old-nav-icon {
+        display: none;
+    }
+    .footer-links {
+        margin: 0 1rem 0 0;
+    }
+    .social-media-icons {
+        margin-right: .6rem;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

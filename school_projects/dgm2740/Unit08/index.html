@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fill Me In">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Unit 08 - News</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <figure class="logo">
+                <img id="logo"
+                     alt="logo"
+                     src="images/logo-whitev2.png">
+            </figure>
+        </header>
+    </div>
+    <div id="navWrapper">
+        <nav>
+            <button onclick="expandMenu()">&#9776;</button>
+            <ul id="navElements" class="hide">
+                <br>
+                <br>
+                <li><a>Home</a></li>
+                <li class="active"><a>Headlines</a></li>
+                <li><a>Business</a></li>
+                <li><a>Politics</a></li>
+                <li><a>Contact</a></li>
+                <li><a>About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="mainWrapper">
+        <div class="story1">
+            <figure>
+                <img src="images/main-story.jpg" width="100%">
+                <figcaption>What tablets are most popular on the market now?</figcaption>
+            </figure>
+        </div>
+        <div class="story23">
+            <figure>
+                <img src="images/fire-story.jpg" width="100%">
+                <figcaption>Volcano Village on the Big Island of Hawaii has risk of burning down</figcaption>
+            </figure>
+            <figure id="largeStory">
+                <img src="images/911.jpg" width="100%">
+                <figcaption>Remembering the sobering moment of 9/11</figcaption>
+            </figure>
+        </div>
+        <div class="story3" id="mediumSmallStory">
+            <figure>
+                <img src="images/911.jpg" width="100%">
+                <figcaption>Remembering the sobering moment of 9/11</figcaption>
+            </figure>
+        </div>
+
+        <div class="story4">
+            <figure>
+                <img src="images/trump.jpg" width="100%">
+                <figcaption>Current President Donald Trump to run as Republican Candidate once again</figcaption>
+            </figure>
+        </div>
+        <div class="story5">
+            <figure>
+                <img src="images/moon.jpg" width="100%">
+                <figcaption>What are the next "steps" for NASA on the moon?</figcaption>
+            </figure>
+        </div>
+        <div class="story6">
+            <figure>
+                <img src="images/parade.jpeg" width="100%">
+                <figcaption>The city of Chichén Itzá in Mexico celebrates their mayan heritage</figcaption>
+            </figure>
+        </div>
+        <div class="story7">
+            <figure>
+                <img src="images/olympics.jpg" width="100%">
+                <figcaption>What to expect for Tokyo Summer Olympics 2020</figcaption>
+            </figure>
+        </div>
+    </div>
+    <div id="footerWrapper">
+        <div class="footer-column1">
+            <h4>TOP STORIES BY CATEGORY</h4>
+            <p>World Headlines</p>
+            <p>Politics</p>
+            <p>Business</p>
+            <p>Agriculture</p>
+        </div>
+        <div class="footer-column2">
+            <h4>HEADLINES</h4>
+            <p>New Stories</p>
+            <p>Trending</p>
+            <p>Other</p>
+        </div>
+        <div class="footer-column3">
+            <h4>BUSINESS</h4>
+            <p>New Stories</p>
+            <p>Trending</p>
+            <p>Other</p>
+        </div>
+        <div class="footer-column4">
+            <h4>POLITICS</h4>
+            <p>New Stories</p>
+            <p>Trending</p>
+            <p>Other</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 201 &bull; Tyler Ivie &bull; 801.111.2222
+    </footer>
+</body>
+</html>
+<style></style>
+<script>
+    function expandMenu() {
+        document.getElementById("navElements").classList.toggle("hide");
+    }
+</script>

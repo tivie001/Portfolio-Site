@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fill Me In">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Capstone Project</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.3.0/dist/lazyload.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <figure class="logo">
+                <img id="logo"
+                     alt="logo"
+                     src="images/logo.png"
+                     srcset="images/logo1x.png 1x,
+                             images/logo2x.png 2x,
+                             images/logo3x.png 3x">
+            </figure>
+            <h1 class="mainHeaders">Italia</h1>
+            <h3 id="coSlogan">Segui il tuo corso, e lascia dir genti.</h3>
+        </header>
+    </div>
+    <div id="navWrapper">
+        <nav>
+            <button onclick="expandMenu()">&#9776;</button>
+            <ul id="navElements" class="hide">
+                <br>
+                <br>
+                <li><a>Home</a></li>
+                <li class="active"><a>Visit</a></li>
+                <li><a>Sites</a></li>
+                <li><a>News</a></li>
+                <li><a>Contact</a></li>
+                <li><a>About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="mainWrapper">
+        <div class="sliders">
+            <div>
+                <img src="images/italy1.jpg" class="sliderImage" alt="sliderImg">
+            </div>
+            <div>
+                <img src="images/italy2.jpeg" class="sliderImage" alt="sliderImg">
+            </div>
+            <div>
+                <img src="images/italy4.jpg" class="sliderImage" alt="sliderImg">
+            </div>
+            <div>
+                <img src="images/italy3.jpeg" class="sliderImage" alt="sliderImg">
+            </div>
+        </div>
+        <br>
+        <br>
+        <h1 class="pageHeader">Vieni in Italia</h1>
+        <hr>
+        <div id="cardGrid">
+            <div class="card" id="card1">
+                <div class="image-overlay">
+                    <img src="images/hotels.jpg" class="cardImage" alt="cardImg">
+                </div>
+                <div class="text-layer">
+                    <i class="fas fa-hotel icons"></i>
+                    <p class="card-text">Hotels & Booking</p>
+                </div>
+            </div>
+            <div class="card" id="card2">
+                <div class="image-overlay">
+                    <img src="images/italian-food.jpg" class="cardImage" alt="cardImg">
+                </div>
+                <div class="text-layer">
+                    <i class="fas fa-utensils icons"></i>
+                    <p class="card-text">Food & Yummies</p>
+                </div>
+            </div>
+            <div class="card" id="card3">
+                <div class="image-overlay">
+                    <img src="images/excursions.jpg" class="cardImage" alt="cardImg">
+                </div>
+                <div class="text-layer">
+                    <i class="fas fa-hiking icons"></i>
+                    <p class="card-text">Excursions</p>
+                </div>
+            </div>
+            <div class="card" id="card4">
+                <div class="image-overlay">
+                    <img src="images/landmarks.jpg" class="cardImage" alt="cardImg">
+                </div>
+                <div class="text-layer">
+                    <i class="fas fa-landmark icons"></i>
+                    <p class="card-text">Landmarks & Sites</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="pageHeader">Galleria</h1>
+        <hr>
+        <br>
+    </div>
+    <div id="galleryImages">
+        <img data-src="images/italyImage1.jpg" class="band-pics lazy" alt="A lazy image" src="images/unavailable-image.jpg"  data-orig="images/unavailable-image.jpg" width="100%">
+        <img data-src="images/italyImage2.jpg" class="band-pics lazy" alt="A lazy image" src="images/unavailable-image.jpg"  data-orig="images/unavailable-image.jpg" width="100%">
+        <img data-src="images/italyImage3.jpg" class="band-pics lazy" alt="A lazy image" src="images/unavailable-image.jpg"  data-orig="images/unavailable-image.jpg" width="100%">
+        <img data-src="images/italyImage4.jpg" class="band-pics lazy" alt="A lazy image" src="images/unavailable-image.jpg"  data-orig="images/unavailable-image.jpg" width="100%">
+    </div>
+    <div class="mainWrapper">
+        <h1 class="pageHeader">Grazie for Visiting! Please fill out form below for more info!</h1>
+        <hr>
+        <br>
+        <form class="form-class" action="thanksPage.html" method="get">
+            <div class="infoCard">
+                <div class="inputDiv">
+                    <label for="fullName">Full Name*</label>
+                    <input required type="text" id="fullName" name="firstname" placeholder="John Doe">
+                    <label for="email">Email Address*</label>
+                    <input required type="text" id="email" name="email" placeholder="johndoe@example.com">
+                    <textarea placeholder="Fill out comments, suggestions, or information requests here..."></textarea>
+                </div>
+                <div class="inputDiv">
+                    <input type="checkbox" id="checkBox" name="checkbox">
+                    <span class="checkBoxLabel">
+                         I would like to receive emails about exclusive offers and travel information
+                    </span>
+                    <br>
+                </div>
+            </div>
+            <input type="submit" id="submitBtn" value="SUBMIT ORDER">
+        </form>
+    </div>
+    <div id="footerWrapper">
+        <footer>
+            DGM 2740 &bull; Capstone Project &copy; Tyler Ivie
+        </footer>
+    </div>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+    </script>
+    <script src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sliders').slick({
+                dots: true,
+                arrows: false,
+                infinite: true,
+                speed: 1000,
+                cssEase: 'ease-out',
+                autoplay: true,
+                autoplaySpeed: 5000,
+            })
+        });
+        function expandMenu() {
+            document.getElementById("navElements").classList.toggle("hide");
+        }
+        let lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazy"
+            // ... more custom settings?
+        });
+        if (lazyLoadInstance) {
+            lazyLoadInstance.update();
+        }
+    </script>
+</body>
+</html>

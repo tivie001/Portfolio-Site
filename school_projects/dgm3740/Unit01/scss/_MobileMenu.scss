@@ -1,0 +1,96 @@
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+#hamburgerBtn { display: none; }
+
+$menuColor: #ff4500;
+$menuTextColor: rgba(255,255,255,0.9);
+
+@media only screen and (max-width: 60rem) {
+
+	body { padding-top: 2.75rem; }
+
+	nav {
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 2.75rem;
+		background-color: $menuColor;
+	}
+
+	#hamburgerBtn {
+		display: block;
+		width: 7rem;
+		height: 2.75rem;
+		background: none;
+		color: $menuTextColor;
+		border: 0 none;
+		font-size: 1.3rem;
+		font-weight: normal;
+		text-align: left;
+		i {
+			font-size: 2rem;font-style: normal;
+		}
+
+	}
+
+	#hamburgerBtn.open span:nth-child(1) {display: none;}
+	#hamburgerBtn.open span:nth-child(2) {display: block;}
+	#hamburgerBtn span:nth-child(1) {display: block;}
+	#hamburgerBtn span:nth-child(2) {display: none;}
+
+	#navElements {
+		height: 0;
+		overflow: hidden;
+		width: 20rem;
+		background-color: $menuColor;
+		margin: 0;
+		padding: 0;
+		z-index: 998;
+		font-family: Avenir;
+		font-weight: normal;
+	}
+
+	#navElements li.current-menu-item a {background-color: rgba(0,0,0,0.25);}
+
+	#navElements li a {
+		display: block;
+		width: 100%;
+		padding: .75rem 2vw;
+		font-size: 14px;
+		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
+		color: $menuTextColor;
+		text-decoration: none;
+		border-top: 1px solid rgba(0,0,0,.2);
+	}
+
+	#navElements li a:hover {
+		background-color: rgba(0,0,0,.5);
+	}
+
+	#navElements.open {height: auto;}
+
+	#navElements li.parent > a::after {
+		font-size: .75rem;
+		content: "\25BC";
+		color: rgba(255,255,255,.5);
+		float: right;
+	}
+
+	#navElements li ul {
+		display: none;
+		background: rgba(0,0,0,.3);
+		padding: 0;
+		margin: 0 ;
+	}
+
+	#navElements li ul a {
+		padding-left: 20px;
+	}
+
+	#navElements li:hover ul {display: block;}
+
+
+}

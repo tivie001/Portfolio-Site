@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>03 Guessing Game</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h1 id="coName" class="header" style="margin: 0rem 0 0 4rem" ><div id="header-text">Guessing Game</div></h1>
+	<h2 id="slogan" class="header" style="color: white; margin: -6rem 0 -8rem 22rem">"Dare you to guess!"</h2>
+	<h1 style="margin-top: 3rem; color: #4286f4; font-family: Arial Black">Guessing Game</h1>
+	<h2 style="margin-top: 0rem; color: #6fa5fc">What I learned</h2>
+	<ul style="margin: 1rem 0 1rem 0">
+		<li>Get input from user</li>	
+		<li>Implement multi-level if and else statements to output desired result to user!</li>
+		<li>How to create a element dynamically, append it to a child, and print it to screen</li>		
+		<li>Math Functions like a random number generator</li>
+		<li>Increment tries when button is clicked</li>		
+	</ul>
+
+	<h2 style="margin-top: 0rem; color: #6fa5fc">Instructions</h2>
+	<ul style="margin: 1rem 0 1rem 0">
+		<li>How to play this game is you begin by clicking the GUESS button and the computer will tell you if you have guessed the random number it chose between 1 and 15! You will be awarded a ribbon based on how many tries it takes to guess the random number! Refresh page to start over. Good luck! :)</li>
+	</ul>
+	<div style="border-style: inset">
+		<div style="margin: 1em 0 0 1em">
+			<h2 id="pageTitle" style="color: #6fa5fc">Lets Play!</h2>
+			<input id="guessedNum">
+			<button onclick="guessNumber()" id="button">Guess</button>
+			<div style="width:100%; color: #6fa5fc">
+				<h2>Number of Tries = <span id="totalGuesses"></span></h4>
+				<h2>Feedback = <span id="feedback"></span></h4>
+			</div>
+			<div style="width:100%">
+				<div id="award-image"></div>
+			</div>
+		</div>
+	</div>    
+	<footer class=footer>Unit 03 - Guessing Game by Tyler Ivie</footer>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+</html>

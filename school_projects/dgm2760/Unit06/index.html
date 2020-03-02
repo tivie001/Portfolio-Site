@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>06 Nonsense Story</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h1 id="coName" class="header" style="margin-top: 0em" ><div id="header-text">Nonsense Story</div></h1>
+	<h2 id="slogan" class="header" style="color: white; margin: -9rem 0 0 2rem">"Onions have layers. Ogres have layers... You get it? We both have layers!"</h2>
+	<h1 style="margin-top: -3rem; color: #5d7c3d; font-family: Arial Black">The Tall Tale of Shrek the Ogre</h1>
+	<h2 style="margin-top: 0rem; color: grey">What I learned</h2>
+	<ul>
+		<li>How to get input from user.</li>
+		<li>How to parse input by using a JS function.</li>
+		<li>How to format text into lowercase letters.</li>
+		<li>How to display input dynamically in the story.</li>
+	</ul>
+	<ul style="margin: 1rem 0 0rem 0"></ul>
+	<table style="width: 90%">
+	  <tr>
+	    <th style="font-size: 20px; color: #89714b">Choose Seven Nouns</th>
+	    <th style="font-size: 20px; color: #89714b">Choose Three Adjectives</th>
+	    <th style="font-size: 20px; color: #89714b">Choose Two Verbs</th>
+	  </tr>
+	</table>
+	<div class="row" style="width: 100%; margin-left: 4rem">
+		<div class="column">
+			<textarea rows="7" id="nouns"></textarea>
+		</div>
+		<div class="column">
+			<textarea rows="7" id="adjectives"></textarea>
+		</div>
+		<div class="column">
+			<textarea rows="7" id="verbs"></textarea>
+		</div>
+	</div>
+	<button class="button-style" id="remove-first" onclick="getStory()" style="margin-left: 38%">TELL ME THE STORY</button>
+	<div id="story" style="width: 70%">
+		 Once upon a time there was a(n) <span id="adj1" style="color: gold"></span> 
+	     <span id="noun1" style="color: gold"></span>. But she had a(n) <span id="noun2" style="color: gold"></span> 
+	     upon her of a <span id="adj2" style="color: gold"></span> sort which could 
+	     only be broken by love's first <span id="noun3" style="color: gold"></span>. 
+	     She was locked away in a <span id="verb1" style="color: gold"></span> <span id="noun4" style="color: gold"></span> 
+	     by a terrible fire-breathing <span id="noun5" style="color: gold"></span>. 
+	     Many <span id="adj3" style="color: gold"></span> knights had attempted to 
+	     free her from this dreadful prison, 
+	     but non prevailed. She <span id="verb2" style="color: gold"></span> in the 
+	     <span id="noun5" style="color: gold"></span> keep in the highest room of 
+	     the tallest <span id="noun6" style="color: gold"></span> for her true love 
+	     and true love's first kiss. (laughs) 
+	     Like that's ever gonna happen. What 
+	     a load of <span id="noun7" style="color: gold"></span>!
+	</div>
+	<footer class=footer>Unit 06 - Nonsense Story by Tyler Ivie</footer>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+</html>

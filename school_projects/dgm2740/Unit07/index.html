@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fill Me In">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Unit 07 - Law Firm</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+<body>
+    <div id="headerWrapper">
+        <div class="header-row">
+            <div class="flex-left">
+                <header class="clearfix">
+                    <h1 class="mainHeaders">Marley & Associates</h1>
+                    <h2 id="coSlogan">We are the law</h2>
+                </header>
+            </div>
+            <div class="flex-right">
+                <input class="search-box" placeholder="search">
+            </div>
+        </div>
+    </div>
+    <div id="desktopMenu">
+        <div class="navWrapper">
+            <nav class="clearfix">
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><a>About Us</a></li>
+                    <li class="active"><a>Attorneys</a></li>
+                    <li><a>Locations</a></li>
+                    <li><a>News</a></li>
+                    <li><a>Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="mobileMenu">
+        <div class="navWrapper">
+            <nav class="clearfix">
+                <ul>
+                    <a id="hamburger" onclick="expandMenu()">&#9776;</a>
+                </ul>
+                <ul id="menu" class="closed">
+                    <li><a>Home</a></li>
+                    <li><a>About Us</a></li>
+                    <li class="active"><a>Attorneys</a></li>
+                    <li><a>Locations</a></li>
+                    <li><a>News</a></li>
+                    <li><a>Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="mainWrapper">
+        <div class="lawyer-row">
+            <div class="lawyer-card-gap"></div>
+            <div class="lawyer-card">
+                <h4>Luke Perry</h4>
+                <img class="lawyer-portrait" src="images/luke-perry.jpg" alt="lawyer1" style="width:100%">
+                <button>LEARN MORE</button>
+            </div>
+            <div class="lawyer-card">
+                <h4>Jerry Rice</h4>
+                <img class="lawyer-portrait" src="images/jerry-rice.jpg" alt="lawyer2" style="width:100%">
+                <button>LEARN MORE</button>
+            </div>
+            <div class="lawyer-card">
+                <h4>Pam Smith</h4>
+                <img class="lawyer-portrait" src="images/pam-smith.jpg" alt="lawyer3" style="width:100%">
+                <button>LEARN MORE</button>
+            </div>
+            <div class="lawyer-card">
+                <h4>Frank Grue</h4>
+                <img class="lawyer-portrait" src="images/frank-grue.jpg" alt="lawyer4" style="width:100%">
+                <button>LEARN MORE</button>
+            </div>
+        </div>
+        <div class="cta-row">
+            <div class="cta-gap"></div>
+            <div class="cta-btn1">
+                <h3>CLIENTS</h3>
+            </div>
+            <div class="cta-btn2">
+                <h3>YOUR CASE REVIEW</h3>
+            </div>
+            <div class="cta-btn1">
+                <h3>FAMOUS CASES</h3>
+            </div>
+        </div>
+        <div class="blog-row">
+            <div class="blog-card">
+                <img class="blog-image" src="images/law.png" alt="lawyer1" style="width:100%">
+                <h4>What we do at Marley & Associates</h4>
+                <p>Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat.
+                    Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor
+                    lectus nibh.
+                </p>
+                <div class="learn-more-btn">
+                    <p>LEARN MORE</p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img class="blog-image" src="images/courthouse.jpeg" alt="lawyer1" style="width:100%">
+                <h4>Lawyer in Vegas killed with gun</h4>
+                <p>Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat.
+                    Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor
+                    lectus nibh.
+                </p>
+                <div class="learn-more-btn">
+                    <p>LEARN MORE</p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img class="blog-image" src="images/trump.jpg" alt="lawyer1" style="width:100%">
+                <h4>Trump Impeached or Not?</h4>
+                <p>Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat.
+                    Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor
+                    lectus nibh.
+                </p>
+                <div class="learn-more-btn">
+                    <p>LEARN MORE</p>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img class="blog-image" src="images/bob-marley.jpeg" alt="lawyer1" style="width:100%">
+                <h4>Who even is Bob Marley?</h4>
+                <p>Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat.
+                    Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor
+                    lectus nibh.
+                </p>
+                <div class="learn-more-btn">
+                    <p>LEARN MORE</p>
+                </div>
+            </div>
+        </div>
+        <div class="tip-row">
+            <div class="tip-card">
+                <h4>Tip of the Day</h4>
+                <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Praesent sapien massa, convallis
+                    a pellentesque nec, egestas non nisi. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                    Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget malesuada. Vivamus magna justo,
+                    lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.
+                    Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum
+                    ac diam sit amet quam vehicula elementum sed sit amet dui.
+                </p>
+                <div class="read-more-btn">
+                    <h6>READ MORE +</h6>
+                </div>
+            </div>
+            <div class="faq">
+                <h4>Why choose Marley & Associates?</h4>
+                <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+                <div class="read-more-btn">
+                    <h6>READ MORE +</h6>
+                </div>
+            </div>
+            <div class="faq">
+                <h4>What is the best method of contact?</h4>
+                <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero
+                </p>
+                <div class="read-more-btn">
+                    <h6>READ MORE +</h6>
+                </div>
+            </div>
+            <div class="faq">
+                <h4>Where are we located?</h4>
+                <p class="faq3">Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit.
+                </p>
+                <div class="read-more-btn">
+                    <h6>READ MORE +</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerWrapper">
+        <footer>
+            <i class="fab fa-facebook-square icon-size"></i>
+            <i class="fab fa-instagram icon-size"></i>
+            <i class="fab fa-twitter-square icon-size"></i>
+            <i class="fab fa-linkedin icon-size"></i>
+        </footer>
+    </div>
+</body>
+</html>
+<script>
+    function expandMenu() {
+        let x = document.getElementById("menu");
+
+        if (x.className === "closed") {
+            x.classList.remove('closed');
+            x.classList.add('open');
+        } else {
+            x.className = "closed";
+        }
+    }
+</script>
+<style>
+</style>

@@ -1,0 +1,80 @@
+/* Prevent adjustments of font size when orientation changes  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.navWrapper {
+    background: #A63446;
+}
+/*----- Responsive Navigation -----*/
+nav ul.hide {
+    display: none;
+}
+nav br {
+    display: block;
+}
+
+nav button {
+    margin: .2rem 2%;
+    background-color: #496c78;
+    border: none;
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 2px;
+    float: left;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #1B3022;
+    position: relative;
+    margin-bottom: 5vh;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.4);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: .8rem 2%;
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #dbdbdb;
+    color: #000000;
+}
+
+nav ul li.active a {
+    background-color: #dbdbdb;
+    color: #000000;
+}
+nav {
+    width: 100%;
+}
+
+/*----------- BODY --------------*/
+
+
+.card {
+    height: 200px;
+    grid-column: span 12;
+    text-align: center;
+    position: relative;
+    margin-bottom: 5rem;
+    box-shadow: 5px 10px #bababa;
+}
+.cardImage {
+    height: 200px;
+    width: 100%;
+}

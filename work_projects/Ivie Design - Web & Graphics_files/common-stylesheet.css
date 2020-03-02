@@ -1,0 +1,46 @@
+body {
+    height: 1000px;
+}
+.social-media-icons {
+    float: left;
+    font-size: 25px;
+    margin-right: 1.5rem;
+}
+#facebook-icon:hover {
+    color: #3C5A99;
+    transition: .7s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+}
+#insta-icon:hover {
+    color: #E1306C;
+    transition: .7s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+}
+#twitter-icon:hover {
+    color: #1DA1F2;
+    transition: .7s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+}
+#pinterest-icon:hover {
+    color: #BD081C;
+    transition: .7s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+}
+#plus-icon {
+    font-size: 50px;
+    color: grey;
+}
+
+.footer-links {
+    float: right;
+    font-size: 18px;
+    margin-right: 2rem
+}
+.footer-links:hover {
+    float: right;
+    font-size: 18px;
+    margin-right: 2rem;
+    transition: .7s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    opacity: .5;
+}

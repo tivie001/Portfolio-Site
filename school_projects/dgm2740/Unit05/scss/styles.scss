@@ -1,0 +1,124 @@
+/* --- RUN THIS COMMAND --> sass --watch scss/styles.scss css/styles.css */
+
+@import "normalize";
+
+@import "small";
+
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media only screen and (max-width: 30rem) {
+    @import "small";
+
+} /* end of media query */
+
+@media only screen and (min-width: 35rem) {
+    @import "medium";
+
+} /* end of media query */
+
+@media only screen and (min-width: 64rem) {
+    @import "large";
+}
+/* end of media query */
+
+#logo {
+    height: 60px;
+    width: 90px;
+    float: left;
+    margin-right: 1rem;
+}
+
+#headerWrapper {
+    max-width: 75rem;
+}
+
+#mainWrapper {
+    max-width: 75rem;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main p {
+    padding: 0 2% 0 2%;
+}
+
+#bodyHeader {
+    padding-left: 2%;
+}
+#heroImage {
+    max-width: 75rem;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    background-color: #ddd;
+}
+header h1 {
+    margin: 0;
+}
+header h2 {
+    margin: 0;
+    font-weight: 100;
+    display: none;
+}
+figure{
+    margin: 0;
+}
+#logo {
+    height: 70px;
+    width: 70px;
+}
+
+
+/*----------- NAVIGATION --------------*/
+div#navWrapper {
+    max-width: 75rem;
+}
+
+#scaledImage {
+    float: right;
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: #ddd;
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mainHeaders {
+    font-family: "Avenir Next";
+    color: #541070;
+}

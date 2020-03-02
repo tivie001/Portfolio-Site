@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	margin: 0 15% 0 15%;
+  height: 1000px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 2rem; 
+}
+
+li::before {
+  content: "• ";
+  color: maroon;
+  padding-right: .5rem;
+}
+
+
+#coName {
+	background-image: url("../download.jpeg");
+  background-size: 1200px 360px;
+	background-repeat: no-repeat;
+	background-position: center;
+  font-weight: bold;
+	font-size: 75px;
+	text-align: left;
+
+}
+#header-text {
+  padding-left: 5rem;
+}
+#slogan {
+	font-style: italic;
+  padding-top: 2rem;
+  padding-left: 3rem;
+}
+
+.footer {
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    background-color: gold;
+    color: black;
+    height: 30px;
+    padding-top: 9px;
+    font-weight: bold;
+}
+.header {
+	height: 150px;
+	color: white;
+	z-index: 0;
+  text-shadow: 4px 4px #0c0c0c;
+
+}
+* {
+    box-sizing: border-box;
+}
+
+.button-style {
+  margin-bottom: .5rem; 
+  font-size: 15px; 
+  font-family: Courier New, Courier, monospace;
+  font-weight: bold;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    margin-right: 1rem;
+    height: 100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#story {
+  font-family: Gill Sans, sans-serif;
+  font-size: 20px;
+}

@@ -1,0 +1,154 @@
+* {
+    font-family: Avenir;
+}
+#content {
+    background-color: #F2F4F1;
+}
+/* ---------- NAVBAR ----------*/
+
+.navbar-default{
+    transition:500ms ease;
+    background:transparent;
+    padding: 1.5rem 1.5rem;
+}
+.navbar-default.scrolled{
+    background-color: #f7f7f7;
+}
+.nav-text {
+    font-family: Avenir;
+    font-size: 20px;
+    font-variant: all-petite-caps;
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+.nav-text:hover {
+    font-family: Avenir;
+    font-size: 20px;
+    font-variant: all-petite-caps;
+    opacity: .5;
+    transition: opacity .5s ease;
+    cursor: pointer;
+    color: grey;
+    text-decoration: none;
+}
+.nav-item {
+    padding: 0 17px 0 17px;
+}
+#mainNav {
+    height: 100px;
+}
+
+/*----- Inline Concept Styles -----*/
+
+.card-container {
+    height: 280px;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.card-item {
+    position: relative;
+    display: inline-block;
+    margin: 8px 8px;
+    box-shadow: 2px 2px 4px #bbb;
+    border-top-right-radius: 4px;
+    height: 225px;
+    vertical-align: bottom;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-item:hover .card-item-overlay {
+    opacity: 1;
+}
+.card-item-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #333333;
+}
+.overlay-title {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 45%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.overlay-sub-title {
+    color: #808080;
+    font-size: 13px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.view-btn {
+    color: #25c07d;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    cursor: pointer;
+}
+.view-btn i {
+    margin-left: .5rem;
+    cursor: pointer;
+}
+.main-body {
+    margin-top: 8rem;
+}
+.work-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+}
+
+
+/* ---------- MAIN BODY ----------*/
+
+.more-message {
+    margin-top: 4rem;
+    color: #b0b0b0;
+    text-align: center;
+}
+#present-icon {
+    font-size: 5rem;
+    color: #b0b0b0;
+    animation: wiggle .1s alternate;
+    animation-iteration-count: 10;
+    transform-origin: center 60%;
+}
+@keyframes wiggle {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+/*----- Media Queries -----*/
+
+@media only screen and (max-width: 35rem) {
+    .footer-links {
+        margin: 0 1rem 0 0;
+    }
+    .social-media-icons {
+        margin-right: .6rem;
+    }
+}

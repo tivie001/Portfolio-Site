@@ -1,0 +1,69 @@
+/* --- RUN THIS COMMAND --> sass --watch scss/styles.scss css/styles.css */
+
+@import "normalize";
+@import "small";
+
+@media only screen and (min-width: 30rem) {
+    @import "medium";
+} /* end of media query */
+
+@media only screen and (min-width: 60rem) {
+    @import "large";
+} /* end of media query */
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem;
+}
+header h1 {
+    margin: 0;
+}
+header h2 {
+    margin: 0;
+    font-family: "Avenir";
+    font-weight: 100;
+    display: none;
+}
+
+.mainHeaders {
+    font-family: Skia;
+    margin: 0 auto;
+    max-width: 71.25rem;
+}
+
+.mainContainer {
+    max-width: 71.25rem;
+}
+
+#headerWrapper {
+    max-width: 71.5rem;
+    margin: 0 auto;
+}
+
+#displayHeader {
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: #ddd;
+    padding: .5rem 2%;
+    text-align: center;
+    background-color: rgba(85, 107, 47, 0.7);
+}
+
+#footerWrapper {
+    max-width: 71.25rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+figcaption {
+    text-align: center;
+    font-family: "Avenir";
+}
+nav ul {
+    font-family: "Avenir";
+    max-width: 71.25rem;
+    background-color: lighten(rgba(85, 107, 47, 0.7), 50%);
+}

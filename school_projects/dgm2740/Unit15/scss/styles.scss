@@ -1,0 +1,163 @@
+/* --- RUN THIS COMMAND --> sass --watch scss/styles.scss css/styles.css */
+
+@import "normalize";
+
+@import "small";
+
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media only screen and (max-width: 30rem) {
+    @import "small";
+
+} /* end of media query */
+
+@media only screen and (min-width: 35rem) {
+    @import "medium";
+
+} /* end of media query */
+
+@media only screen and (min-width: 64rem) {
+    @import "large";
+}
+/* end of media query */
+
+#logo {
+    height: 60px;
+    width: 95px;
+    float: left;
+    margin-right: 1rem;
+}
+#navWrapper {
+    max-width: 63rem;
+    margin: 0 auto;
+    color: #000000;
+}
+
+#headerWrapper {
+    max-width: 65rem;
+    width: 100%;
+    margin: 0 auto;
+}
+#mainWrapper {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    display: grid;
+    text-align: center;
+    font-family: Avenir;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: #111111;
+    color: white;
+}
+.otherWrapper {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 0 5px 25px 5px;
+    display: grid;
+    text-align: center;
+    font-family: Avenir;
+    grid-template-columns: repeat(12, 1fr);
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+}
+figure{
+    margin: 0;
+}
+figcaption {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: .5rem;
+    font-family: "Avenir Next";
+}
+#mainWrapper h2 {
+    color: rgba(255, 207, 26, 0.88);
+    font-weight: 200;
+}
+.otherWrapper h2 {
+    color: #0380B1;
+    margin: 1rem 0 0 0;
+    font-weight: 300;
+}
+.otherWrapper p {
+    margin: .5rem 0 2rem 0;
+}
+.otherWrapper h1 {
+    color: #0380B1;
+    font-weight: 700;
+    margin: 2rem 0 0 0;
+}
+h4 {
+    margin: 0;
+}
+.italics {
+    font-style: italic;
+}
+/*----------- HEADER --------------*/
+header {
+    padding: .5em 2.5%;
+}
+header h1 {
+    margin: 0;
+}
+header h2 {
+    margin: 0;
+    font-weight: 100;
+    display: none;
+}
+#logo {
+    height: 80px;
+    width: 80px;
+}
+
+
+/*----------- NAVIGATION --------------*/
+#scaledImage {
+    float: right;
+}
+
+
+/*----------- FOOTER --------------*/
+#footWrapper {
+    width: 100%;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mainHeaders {
+    font-family: "Avenir Next";
+    color: #541070;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+i {
+    font-size: 1rem;
+    padding-right: .5rem;
+}

@@ -1,0 +1,132 @@
+/* --- RUN THIS COMMAND --> sass --watch scss/styles.scss css/styles.css */
+
+@import "normalize";
+
+@import "small";
+
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media only screen and (max-width: 30rem) {
+    @import "small";
+
+} /* end of media query */
+
+@media only screen and (min-width: 35rem) {
+    @import "medium";
+
+} /* end of media query */
+
+@media only screen and (min-width: 64rem) {
+    @import "large";
+}
+/* end of media query */
+
+#logo {
+    height: 60px;
+    width: 90px;
+    float: left;
+    margin-right: 1rem;
+}
+
+#headerWrapper {
+}
+
+#mainWrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(12, 1fr);
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main p {
+    padding: 0 2% 0 2%;
+}
+
+#bodyHeader {
+    padding-left: 2%;
+}
+figure{
+    margin: 0;
+}
+figcaption {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: .5rem;
+    font-family: "Avenir Next";
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    background-color: #166088;
+}
+header h1 {
+    margin: 0;
+}
+header h2 {
+    margin: 0;
+    font-weight: 100;
+    display: none;
+}
+#logo {
+    height: 80px;
+    width: 80px;
+}
+
+
+/*----------- NAVIGATION --------------*/
+#scaledImage {
+    float: right;
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: #166088;
+    color: #FFFFFF;
+    padding: .5rem 2%;
+    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mainHeaders {
+    font-family: "Avenir Next";
+    color: #541070;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

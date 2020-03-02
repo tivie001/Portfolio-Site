@@ -1,0 +1,125 @@
+/* --- RUN THIS COMMAND --> sass --watch scss/styles.scss css/styles.css */
+
+@import "normalize";
+@import "small";
+
+@media only screen and (min-width: 30rem) {
+    @import "medium";
+} /* end of media query */
+
+@media only screen and (min-width: 60rem) {
+    @import "large";
+} /* end of media query */
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem;
+}
+header h1 {
+    margin: 0;
+    color: white;
+    font-family: "Arial Rounded MT Bold";
+}
+header h2 {
+    margin: 0;
+    font-family: "Avenir";
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    display: none;
+}
+.subHeader {
+    font-family: "Arial Rounded MT Bold";
+}
+.subHeader2 {
+    font-family: "Avenir Next";
+    font-weight: 600;
+}
+
+#mainWrapper {
+    font-family: "Avenir Next";
+    margin: 0 auto;
+    max-width: 60rem;
+    display: block;
+    position: relative;
+}
+
+#headerWrapper {
+    max-width: 60rem;
+    margin: 0 auto;
+    position: relative;
+    color: #000000;
+
+}
+
+
+#displayHeader {
+    margin-top: 1rem;
+}
+
+/*----------- NAV --------------*/
+
+#navWrapper {
+    font-family: "Avenir";
+    background-color: rgba(85, 107, 47, 0.4);
+    width: 100%;
+}
+nav ul {
+    max-width: 60rem;
+    margin: 0 auto;
+    background-color: rgba(85, 107, 47, 0.4);
+
+
+}
+
+/*----------- MAIN --------------*/
+
+#scaledImageBear {
+    float: right;
+    width: 100px;
+    height: 100px;
+    animation: shake-bear .5s;
+    animation-iteration-count: 10;
+    animation-delay: 2s;
+}
+
+@keyframes shake-bear {
+    0% {transform: translate(.5px, .5px) rotate(0deg)}
+    10% { transform: translate(0px, 1px) rotate(-1deg); }
+    20% { transform: translate(-1px, 1.5px) rotate(1deg); }
+    30% { transform: translate(.5px, 0px) rotate(0deg); }
+    40% { transform: translate(1px, -1.5px) rotate(1deg); }
+    50% { transform: translate(-2px, 3px) rotate(-1deg); }
+    60% { transform: translate(-.5px, 1px) rotate(0deg); }
+    70% { transform: translate(.5px, .5px) rotate(-1deg); }
+    80% { transform: translate(0px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#scaledImageMoose {
+    width: 100px;
+    height: 100px;
+    margin: -2rem 0 -2rem 0;
+    animation: move-moose 5s;
+    position: relative;
+    transform: scaleX(-1);
+}
+
+
+
+/*----------- FOOTER --------------*/
+
+footer {
+    background-color: #ddd;
+    padding: .5rem 2%;
+    text-align: center;
+    background-color: rgba(85, 107, 47, 0.4);
+}
+
+#footerWrapper {
+    max-width: 60rem;
+    text-align: center;
+    margin: 0 auto;
+}

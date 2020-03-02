@@ -1,0 +1,155 @@
+/* --- RUN THIS COMMAND --> sass --watch scss/styles.scss css/styles.css */
+
+@import "normalize";
+
+@import "small";
+
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+@media only screen and (max-width: 30rem) {
+    @import "small";
+
+} /* end of media query */
+
+@media only screen and (min-width: 35rem) {
+    @import "medium";
+
+} /* end of media query */
+
+@media only screen and (min-width: 64rem) {
+    @import "large";
+}
+/* end of media query */
+
+div#headerWrapper {
+    max-width: 75rem;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    max-width: 75rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#mainWrapper {
+    margin-top: 2rem;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+}
+header h1 {
+    margin: 0;
+}
+header h2 {
+    margin: 0;
+    font-weight: 100;
+    display: none;
+}
+figure{
+    margin: 0;
+}
+#coSlogan {
+    display: block;
+    font-size: 20px;
+}
+.sub-header {
+    color: #ff4914;
+}
+.search-box {
+    float: right;
+    padding: 10px;
+    background: url(../images/search-solid.svg) no-repeat scroll;
+    padding-left: 50px;
+    background-color: white;
+    height: 15px;
+}
+.header-row {
+    display: flex;
+    flex: 12;
+    position:relative;
+}
+
+.flex-left {
+    flex: 12;
+    display: flex;
+}
+
+.flex-right {
+    position:absolute;
+    bottom: 10%;
+    right: 2%;
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mainHeaders {
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
+    color: #BF2A29;
+}
+
+/*----------- NAVIGATION --------------*/
+.navWrapper {
+    max-width: 75rem;
+}
+
+#scaledImage {
+    float: right;
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: #ddd;
+    padding: .5rem 2%;
+    text-align: center;
+    //position: fixed;
+    //right: 0;
+    //bottom: 0;
+    //left: 0;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+.icon-size {
+    font-size: 35px;
+    margin: 5px;
+    color: #BF2A29;
+}
+.fa-facebook-square {
+    color: #3C5A99;
+}
+.fa-instagram {
+    color: #E1306C;
+}
+.fa-twitter-square {
+    color: #1DA1F2;
+}
+.fa-linkedin {
+    color: #0e76a8;
+}
+
+

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fill Me In">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Unit 09 - Boston City</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <div id="headerWrapper">
+        <header class="clearfix">
+            <h1 class="mainHeaders">Boston City</h1>
+            <h3>Our home, it's all here!</h3>
+        </header>
+    </div>
+    <div id="navWrapper">
+        <nav>
+            <button onclick="expandMenu()">&#9776;</button>
+            <ul id="navElements" class="hide">
+                <br>
+                <br>
+                <li><a>Home</a></li>
+                <li class="active"><a>Visit</a></li>
+                <li><a>Sites</a></li>
+                <li><a>News</a></li>
+                <li><a>Contact</a></li>
+                <li><a>About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="mainWrapper">
+        <div class="sliders">
+            <div>
+                <img src="images/boston-lights.jpg" class="sliderImage" alt="sliderImg">
+            </div>
+            <div>
+                <img src="images/boston-streets.jpg" class="sliderImage" alt="sliderImg">
+            </div>
+            <div>
+                <img src="images/baseball.jpg" class="sliderImage" alt="sliderImg">
+            </div>
+            <div>
+                <img src="images/boston-night.jpg" class="sliderImage" alt="sliderImg">
+            </div>
+        </div>
+        <h1 id="pageHeader">Plan Your Visit</h1>
+        <div id="cardGrid">
+            <div class="card" id="card1">
+                <div class="image-overlay">
+                    <img src="images/hotel.jpeg" class="cardImage" alt="cardImg">
+                </div>
+                <div class="text-layer">
+                    <i class="fas fa-hotel icons"></i>
+                    <p class="card-text">Hotels & Booking</p>
+                </div>
+            </div>
+            <div class="card" id="card2">
+                <div class="image-overlay">
+                    <img src="images/food.jpeg" class="cardImage" alt="cardImg">
+                </div>
+                <div class="text-layer">
+                    <i class="fas fa-utensils icons"></i>
+                    <p class="card-text">Food & Yummies</p>
+                </div>
+            </div>
+            <div class="card" id="card3">
+                <div class="image-overlay">
+                    <img src="images/baseball.jpg" class="cardImage" alt="cardImg">
+                </div>
+                <div class="text-layer">
+                    <i class="fas fa-basketball-ball icons"></i>
+                    <p class="card-text">Sporting Events</p>
+                </div>
+            </div>
+            <div class="card" id="card4">
+                <div class="image-overlay">
+                    <img src="images/sunset-boston.jpg" class="cardImage" alt="cardImg">
+                </div>
+                <div class="text-layer">
+                    <i class="fas fa-landmark icons"></i>
+                    <p class="card-text">Landmarks & Sites</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerWrapper">
+        <footer>
+            DGM 2740 &bull; Unit 09 &copy; Tyler Ivie
+        </footer>
+    </div>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+    </script>
+    <script src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sliders').slick({
+                dots: true,
+                arrows: false,
+                infinite: true,
+                speed: 1000,
+                cssEase: 'ease-out',
+                autoplay: true,
+                autoplaySpeed: 5000,
+            })
+        });
+        function expandMenu() {
+            document.getElementById("navElements").classList.toggle("hide");
+        }
+    </script>
+</body>
+</html>

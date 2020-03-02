@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	margin: 0 10% 0 10%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 2rem; 
+}
+
+li::before {
+  content: "• ";
+  color: orange;
+  padding-right: .5rem;
+}
+
+
+#coName {
+	background-image: url("https://fabulousarizona.com/wp-content/uploads/photo-gallery/forest-highlands-cabin-7.jpg?x59659");
+	padding-top: 4rem;
+	background-repeat: no-repeat;
+	background-position: center;
+    font-weight: bold;
+	font-size: 100px;
+	text-align: center;
+
+}
+#slogan {
+	font-style: italic;
+}
+
+.footer {
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    background-color: #f4a742;
+    height: 30px;
+    padding-top: 9px;
+    font-weight: bold;
+}
+.header {
+	height: 200px;
+	color: white;
+	z-index: 0;
+    text-shadow: 4px 4px #0c0c0c;
+
+}

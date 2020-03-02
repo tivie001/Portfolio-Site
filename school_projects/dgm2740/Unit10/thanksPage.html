@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fill Me In">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Unit 10 - Swag Shop</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+
+<header>
+    <img id="logo" src="images/fire-logo.png">
+    <h1>Hot Fahrenheit Swag</h1>
+    <h2>Make your wardrobe lit!</h2>
+</header>
+
+<nav class="clearfix">
+    <button id="hamburgerBtn"><span><i>&equiv;</i>OPEN</span> <span><i>&otimes;</i>CLOSE</span></button>
+    <ul id="primaryNav">
+        <li><a href="index.html">Home</a></li>
+        <li class="current-menu-item"><a href="#">Order</a></li>
+        <li><a href="#">Sales</a></li>
+        <li class="parent"><a href="#">Products</a>
+            <ul>
+                <li><a href="#">Shirts</a></li>
+                <li><a href="#">Pants</a></li>
+                <li><a href="#">Tanks</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<main>
+    <div id="thanksWrapper">
+        <h1>THANK YOU FOR YOUR ORDER!</h1>
+        <h2>Return home, or you will be redirected back to home in 5 seconds...</h2>
+    </div>
+</main>
+<footer>
+    DGM 2740 &bull; Unit 10 &copy; Tyler Ivie
+</footer>
+<script>
+    window.onload = function () {
+        setTimeout(function(){ window.location.href = "index.html";}, 5000);
+    };
+</script>
+</body>
+</html>

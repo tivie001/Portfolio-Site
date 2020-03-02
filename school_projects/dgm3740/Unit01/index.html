@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fill Me In">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Cabot Cruises</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="headerWrapper">
+        <header class="clearfix" style="text-align: left">
+            <figure class="logo">
+                <img id="logo"
+                     alt="logo"
+                     src="images/cabot-cruises-logo.png"
+                     srcset="images/cabot-cruises-logo1x.png 1x,
+                         images/cabot-cruises-logo2x.png 2x,
+                         images/cabot-cruises-logo3x.png 3x">
+            </figure>
+
+            <p class="phone-num" style="text-align: right">
+                <i class="fas fa-phone"></i>
+                <a href="tel:8011234567">801-123-4567</a>
+            </p>
+        </header>
+    </div>
+    <div id="navWrapper">
+         <nav class="nav">
+             <button id="hamburgerBtn" onclick="expandMenu()">&#9776;</button>
+             <ul id="menu" class="hide">
+                 <li class="menu-item">
+                   <a href="#">Home</a>
+                 </li>
+                 <li class="menu-item active">
+                   <a href="#">Cruises</a>
+                 </li>
+                 <li class="menu-item has-children">
+                   <a href="#">Agents
+                     <span class="dropdown-icon"></span>
+                   </a>
+                   <ul class="sub-menu">
+                     <li class="menu-item">
+                       <a href="#">John Doe</a>
+                     </li>
+                     <li class="menu-item">
+                       <a href="#">Jane Asher</a>
+                     </li>
+                   </ul>
+                 </li>
+                 <li class="menu-item">
+                   <a href="#">Book</a>
+                 </li>
+                 <div class="search-container">
+                     <form action="/action_page.php">
+                         <input type="search" placeholder="Search.." name="search">
+                         <button type="submit"><i class="fas fa-search"></i></button>
+                     </form>
+                 </div>
+            </ul>
+
+         </nav>
+    </div>
+    <div class="sliders">
+        <img src="images/slider-cruise1-v2.jpg"
+             srcset="images/slider-cruise1-sm.jpg 480w, images/slider-cruise1-v2.jpg 1200w"
+             class="sliderImage"
+             alt="Picture of cruiser at night on the Alaskan shore">
+        <img src="images/slider-cruise2-v2.jpg"
+             srcset="images/slider-cruise2-sm.jpg 480w, images/slider-cruise2-v2.jpg 1200w"
+             class="sliderImage"
+             alt="Picture of cruiser at sunset">
+        <img src="images/slider-cruise4-v2.jpg"
+             srcset="images/slider-cruise4-sm.jpg 480w, images/slider-cruise4-v2.jpg 1200w"
+             class="sliderImage"
+             alt="Picture of a docked cruiser">
+        <img src="images/slider-cruise5-v2.jpg"
+             srcset="images/slider-cruise5-sm.jpg 480w, images/slider-cruise5-v2.jpg 1200w"
+             class="sliderImage"
+             alt="Picture of cruiser aside a mountainside with low cloud cover">
+    </div>
+    <div id="mainWrapper">
+        <h1 id="newsHeader">Blog & News</h1>
+        <div class="news-card-row">
+            <div class="news-card">
+                <div class="news-card-text-top">Best Cruises of 2019</div>
+                <img src="images/news-cruise1-v2.jpg" class="news-img" alt="Our best cruises list 2019">
+                <div class="news-card-text-bottom">Oct 31st, 2019</div>
+            </div>
+            <div class="news-card">
+                <div class="news-card-text-top">Meet Your Ship Director</div>
+                <img src="images/cruise-director-v2.jpg" class="news-img" alt="Our best cruises list 2019">
+                <div class="news-card-text-bottom">Nov 23rd, 2019</div>
+            </div>
+            <div class="news-card">
+                <div class="news-card-text-top">Browse Cruise Destinations with Us!</div>
+                <img src="images/news-cruise3-v2.jpg" class="news-img" alt="Our best cruises list 2019">
+                <div class="news-card-text-bottom">Dec 14th, 2019</div>
+            </div>
+            <div class="news-card">
+                <div class="news-card-text-top">BEST PRICED CRUISES! Click here!</div>
+                <img src="images/news-cruise4-v2.jpg" class="news-img" alt="Our best cruises list 2019">
+                <div class="news-card-text-bottom">Jan 22nd, 2020</div>
+            </div>
+        </div>
+    </div>
+    <div id="largeFooter">
+        <div id="footerWrapper">
+            <div class="footer-column">
+                <h2>Contact Us</h2>
+                <a href="https://g.page/santacruzwharf?share" target="_blank">
+                    <p><i class="fas fa-map-pin"></i>
+                        21 Municipal Wharf Santa Cruz, CA 95060
+                    </p>
+                </a>
+                <h2>Phone</h2>
+                <p><a href="tel:8011234567">
+                    <i class="fas fa-phone"></i>
+                    801-123-4567</a>
+                </p>
+                <h2>Hours of Operation</h2>
+                <p><i class="fas fa-calendar-alt"></i>Monday – Friday 9am – 4pm</p>
+            </div>
+            <div id="customFooterHeight" class="footer-column">
+                <h2>News Letter</h2>
+                <input id="subscribeEmail" type="email" placeholder="user@example.com" required>
+                <button id="subscribeBtn">Subscribe</button>
+            </div>
+            <div id="footer-column-full" class="footer-column">
+                <h2>Why Cabot Cruises</h2>
+                <p>
+                    Cabot Cruises is a travel agency providing the best cruise
+                    deals on our online travel website. We can help you with all
+                    inclusive vacations including discounted cruises.
+                </p>
+                <p>
+                    We do not sell travel to residents of Delaware, Iowa,
+                    Florida, Hawaii and Washington state because those states
+                    are just weird. If you are a resident of one of these states,
+                    call your congressman and tell them to change the
+                    regulations.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer id="subFooter1">
+        <i class="fab fa-facebook-square" id="facebookIcon"></i>
+        <i class="fab fa-instagram" id="instaIcon"></i>
+        <i class="fab fa-pinterest-square" id="pinterestIcon"></i>
+        <i class="fab fa-twitter-square" id="twitterIcon"></i>
+        <i class="fab fa-youtube-square" id="youTubeIcon"></i>
+    </footer>
+    <footer id="subFooter2">
+        &copy; Tyler Ivie &bull; <a id="websiteUrl" href="https://www.theiviedesign.com" target="_blank">theiviedesign.com</a>
+    </footer>
+</body>
+</html>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+</script>
+<script src="slick/slick.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.sliders').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 1000,
+            cssEase: 'ease-out',
+            autoplay: true,
+            autoplaySpeed: 5000,
+        })
+    });
+    function expandMenu() {
+        document.getElementById("menu").classList.toggle("hide");
+    }
+
+    let menuItems = document.querySelectorAll('li.has-submenu');
+    Array.prototype.forEach.call(menuItems, function(el, i){
+        el.addEventListener("mouseover", function(event){
+            this.className = "has-submenu open";
+            clearTimeout(timer);
+        });
+        el.addEventListener("mouseout", function(event){
+            timer = setTimeout(function(event){
+                document.querySelector(".has-submenu.open").className = "has-submenu";
+            }, 1000);
+        });
+    });
+</script>

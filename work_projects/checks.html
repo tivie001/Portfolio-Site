@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Custom Css -->
+    <link href="../common-stylesheet.css" rel="stylesheet"/>
+
+    <!-- Custom Js -->
+    <script src="../main.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Check Template Generator</title>
+</head>
+<body class="noScroll">
+
+    <div class="fade-in">
+
+        <!-------  Checks Table   ------->
+
+        <div class="col-12" style="padding: 1.5rem 1rem 1rem 1rem">
+            <div class="card highlight">
+                <div class="card-block" style="overflow: hidden">
+                    <div class="flex-to-content" id="headerElement">
+                        <div class="justify-content-edge" id="cardTitleId" style="margin: 7px">
+                            <a href="../subpages/myWork.html" style="text-decoration: none; color: black">
+                                <button type="button" class="btn btn-light">< Back</button>
+                            </a>
+                            <h3 class="card-title mb-0" style="color: #505050; padding: .5rem 5rem 0 0">Check Template Generator</h3>
+                            <div></div>
+                        </div>
+                        <div class="justify-content table-search-bar" id="tableSearchId">
+                            <div style="width: 60%; padding: 1.5rem 0 2rem 0">
+                                <input class="form-control modify dark form-border" style="width: 100%; text-align: center" type="text" id="searchBox">
+                                <p class="text mb-0 editFont" style="text-align: center">Search by Check #, Payee, Payor, Amount, Status, or Date</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive table-fixed" style="padding: 0 3rem 0 3rem">
+                        <table class="table" style="overflow: scroll">
+                            <tbody>
+                            <tr style="border-bottom: 1px solid #ededed">
+                                <td class="text-uppercase" style="font-weight: bold; width: 12%">Check #</td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 29%">Payor/Payee</td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 25%">Amount (USD)</td>
+                                <td class="text-uppercase" style="font-weight: bold; width: 22%">Status</td>
+                                <td class="text-uppercase" style="font-weight: bold">Date Created</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-responsive table-fixed" id="table-scroll" style="height: 425px; overflow: auto; text-align: left">
+                        <table class="table table-hover table-striped" style="width: 100%; overflow: scroll" id="checkTable">
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#checkTempModal" onclick="popUpModal1()">
+                                    <td></td>
+                                    <td id="object1Num" style="font-weight: bold; letter-spacing: 1px; font-family: Monaco"></td>
+                                    <td class="text-uppercase" style="font-weight: bold">
+                                        <p id="object1Payee" class="text-uppercase" style="font-weight: bold"></p>
+                                        <p id="object1Payor" class="text-uppercase" style="font-size: 13px; color: #808080; margin: -15px 0 -1px 0"></p>
+                                    </td>
+                                    <td id="object1Amt"></td>
+                                    <td id="object1Status" class="text-uppercase" style="color: #21bf2e"></td>
+                                    <td id="object1Date" class="text-uppercase"></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#checkTempModal" onclick="popUpModal2()">
+                                    <td></td>
+                                    <td id="object2Num" style="font-weight: bold; letter-spacing: 1px; font-family: Monaco"></td>
+                                    <td class="text-uppercase" style="font-weight: bold">
+                                        <p id="object2Payee" class="text-uppercase" style="font-weight: bold"></p>
+                                        <p id="object2Payor" class="text-uppercase" style="font-size: 13px; color: #808080; margin: -15px 0 -1px 0"></p>
+                                    </td>
+                                    <td id="object2Amt" style="width: 23%"></td>
+                                    <td id="object2Status" class="text-uppercase" style="margin-left: -1em; color: #2a72c6"></td>
+                                    <td id="object2Date" style="width: 15%" class="text-uppercase"></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #ededed; height: 60px" data-toggle="modal" data-target="#checkTempModal" onclick="popUpModal3()">
+                                    <td></td>
+                                    <td id="object3Num" style="font-weight: bold; letter-spacing: 1px; font-family: Monaco"></td>
+                                    <td class="text-uppercase" style="font-weight: bold">
+                                        <p id="object3Payee" class="text-uppercase" style="font-weight: bold"></p>
+                                        <p id="object3Payor" class="text-uppercase" style="font-size: 13px; color: #808080; margin: -15px 0 -1px 0"></p>
+                                    </td>
+                                    <td id="object3Amt" style="width: 23%"></td>
+                                    <td id="object3Status" class="text-uppercase" style="margin-left: -1em; color: #ec130f"></td>
+                                    <td id="object3Date" style="width: 15%" class="text-uppercase"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------   Check Modal   ------->
+
+    <div class="modal fade" id="checkTempModal" tabindex="-1" role="dialog" aria-labelledby="editTransModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content">
+                    <h4 class="modal-title" style="text-align: center">View Check Template:</h4>
+                </div>
+                <div class="container" style="margin-bottom: 2rem">
+                    <div style="display: flex; justify-content: center">
+                        <div id="checkOutline" class="col-12" style="height: 250px; padding: 1rem; border: 2px solid #215393; background-color: #f4f4f4">
+                            <div class="justify-content-edge" style="margin-bottom: 1rem">
+                                <h5 style="font-weight: bold; font-size: 20px">BANK OF EXAMPLE</h5>
+                                <h6 id="newCheckDate"></h6>
+                                <h6 id="newCheckNum" style="font-weight: bold; font-size: 20px"></h6>
+                            </div>
+                            <div class="justify-content-edge" style="font-size: 15px">
+                                <h6 class="text-uppercase"><span class="check-text" style="margin-right: 1.5rem; font-weight: lighter">Pay to the</span>
+                                    <span id="newCheckPayee"></span>
+                                    <br>
+                                    <span class="check-text" style="margin-right: 2.3rem; font-weight: lighter">Order of </span><span id="numWord" class="wrap" style="font-size: 15px"></span>
+                                </h6>
+                                <h5 id="newCheckAmt" style="font-weight: bold; margin-top: .60rem"></h5>
+                            </div>
+                            <div class="spacer" style="height: 1rem"></div>
+                            <div class="justify-content-edge" style="margin-left: 7.3rem; margin-bottom: -.3rem; font-size: 15px">
+                                <h6 id="newCheckPayee1"></h6>
+                            </div>
+                            <div class="justify-content-edge" style="margin-left: 7.3rem; font-size: 15px">
+                                <h6 id="newCheckAddress"></h6>
+                            </div>
+                            <div class="spacer" style="height: 1rem"></div>
+                            <div class="justify-content-edge" style="margin: .2rem 0 -.4rem 0; width: 100%">
+                                <h6><span id="newCheckMemo" class="check-text" style="margin-right: 1rem">MEMO:</span></h6>
+                                <h6> _________________________________<br><p style="font-size: 12px; text-align: center">AUTHORIZED SIGNATURE</p></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-edge">
+                    <div style="justify-self: flex-start">
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancel</button>
+                    </div>
+                    <div class="row md-0" style="padding-right: 1rem">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="printCheck()">Print Check</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------   Check Print View   ------->
+
+    <div class="visible-print-block" id="formatPrintCheck" style="display: none">
+        <title>Check Print</title>
+        <div class="justify-content-edge" style="margin-left: 60px; font-family: Arial">
+            <div style="display: table; padding-top: 22px; width: 100%; margin-bottom: -4rem">
+                <h5 style="display: table-cell; font-weight: bold; font-size: 20px">BANK OF EXAMPLE</h5>
+                <h6 id="printDate" style="font-weight: bold; text-align: right; font-size: 18px; padding-right: 2rem"></h6>
+            </div>
+            <h6 id="printNum" style="font-weight: bold; text-align: right; font-size: 18px; font-family: Monaco; padding-right: 2rem"></h6>
+        </div>
+        <div class="col-12" style="height: 125px; margin: 15px 0 15px 0">
+            <div class="justify-content-edge" style="margin-left: 60px; margin-bottom: 85px; font-family: Arial">
+                <div style="display: table; padding-top: 10px">
+                    <h5 id="printPayee" style="display: table-cell; width: 100%; font-size: 20px"></h5>
+                    <h5 id="printAmount" style="font-weight: bold; text-align: right; margin-right: 2rem; font-size: 18px"></h5>
+                </div>
+                <div class="leaders" style="display: table; margin-top: -25px; font-size: 16px">
+                    <h5 id="printNumWord" style="font-weight: bold; display: table-cell; width: 500px; text-transform: uppercase; text-overflow: ellipsis"></h5>
+                </div>
+                <div style="font-size: 20px">
+                    <h6><span id="printPayee1"></span><br><span id="printAddress"></span></h6>
+                </div>
+                <div style="font-size: 20px">
+                    <h6 id="printMemo"></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    let rows = [{
+        num: "0010",
+        payor: "Attention Films Co.",
+        payee: "Billie Budder",
+        amount: "$500.00",
+        status: "Cashed",
+        date: "2019-Nov-04"
+    }, {
+        num: "0009",
+        payor: "Billie Budder",
+        payee: "Janet Janice",
+        amount: "$1234.56",
+        status: "Not Cashed",
+        date: "2019-Nov-01"
+    }, {
+        num: "0008",
+        payor: "Tyler Smith",
+        payee: "Lindsay Loren",
+        amount: "$1000.00",
+        status: "Void",
+        date: "2019-Oct-31"
+    }];
+
+    document.getElementById("object1Num").innerHTML = rows[0].num;
+    document.getElementById("object1Payor").innerHTML = rows[0].payor;
+    document.getElementById("object1Payee").innerHTML = rows[0].payee;
+    document.getElementById("object1Amt").innerHTML = rows[0].amount;
+    document.getElementById("object1Status").innerHTML = rows[0].status;
+    document.getElementById("object1Date").innerHTML = rows[0].date;
+
+    document.getElementById("object2Num").innerHTML = rows[1].num;
+    document.getElementById("object2Payor").innerHTML = rows[1].payor;
+    document.getElementById("object2Payee").innerHTML = rows[1].payee;
+    document.getElementById("object2Amt").innerHTML = rows[1].amount;
+    document.getElementById("object2Status").innerHTML = rows[1].status;
+    document.getElementById("object2Date").innerHTML = rows[1].date;
+
+    document.getElementById("object3Num").innerHTML = rows[2].num;
+    document.getElementById("object3Payor").innerHTML = rows[2].payor;
+    document.getElementById("object3Payee").innerHTML = rows[2].payee;
+    document.getElementById("object3Amt").innerHTML = rows[2].amount;
+    document.getElementById("object3Status").innerHTML = rows[2].status;
+    document.getElementById("object3Date").innerHTML = rows[2].date;
+
+    $(document).ready(function(){
+        $("#searchBox").on("keyup", function() {
+            let value = $(this).val().toLowerCase();
+            $("#checkTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+    function printCheck() {
+        let w = window.open();
+        let html = $("#formatPrintCheck").html();
+        $(w.document.body).html(html);
+    }
+
+    function popUpModal1() {
+        document.getElementById("newCheckNum").innerHTML = rows[0].num;
+        document.getElementById("newCheckMemo").innerHTML = "Example refund memo";
+        document.getElementById("newCheckPayee").innerHTML = rows[0].payee;
+        document.getElementById("newCheckPayee1").innerHTML = "Billie Budder";
+        document.getElementById("newCheckAddress").innerHTML = "234 Chickadee Way, Boulder, CO. 12345";
+        document.getElementById("numWord").innerHTML = "Five Hundred and Zero Cents";
+        document.getElementById("newCheckAmt").innerHTML = rows[0].amount;
+        document.getElementById("newCheckDate").innerHTML = rows[0].date;
+
+        document.getElementById("printNum").innerHTML = rows[0].num;
+        document.getElementById("printMemo").innerHTML = "Example refund memo";
+        document.getElementById("printPayee").innerHTML = rows[0].payee;
+        document.getElementById("printPayee1").innerHTML = "Billie Budder";
+        document.getElementById("printAddress").innerHTML = "234 Chickadee Way, Boulder, CO. 12345";
+        document.getElementById("printNumWord").innerHTML = "Five Hundred and Zero Cents";
+        document.getElementById("printAmount").innerHTML = rows[0].amount;
+        document.getElementById("printDate").innerHTML = rows[0].date;
+    }
+    function popUpModal2() {
+        document.getElementById("newCheckNum").innerHTML = rows[1].num;
+        document.getElementById("newCheckMemo").innerHTML = "Another memo example";
+        document.getElementById("newCheckPayee").innerHTML = rows[1].payee;
+        document.getElementById("newCheckPayee1").innerHTML = "Janet Janice";
+        document.getElementById("newCheckAddress").innerHTML = "1010 Griffin Blvd, Salt Lake City, UT. 82345";
+        document.getElementById("numWord").innerHTML = "One Thousand Two Hundred Thirty-Four Dollars and Fifty-Six Cents";
+        document.getElementById("newCheckAmt").innerHTML = rows[1].amount;
+        document.getElementById("newCheckDate").innerHTML = rows[1].date;
+
+        document.getElementById("printNum").innerHTML = rows[1].num;
+        document.getElementById("printMemo").innerHTML = "Another memo example";
+        document.getElementById("printPayee").innerHTML = rows[1].payee;
+        document.getElementById("printPayee1").innerHTML = "Janet Janice";
+        document.getElementById("printAddress").innerHTML = "1010 Griffin Blvd, Salt Lake City, UT. 82345";
+        document.getElementById("printNumWord").innerHTML = "One Thousand Two Hundred Thirty-Four Dollars and Fifty-Six Cents";
+        document.getElementById("printAmount").innerHTML = rows[1].amount;
+        document.getElementById("printDate").innerHTML = rows[1].date;
+    }
+    function popUpModal3() {
+        document.getElementById("newCheckNum").innerHTML = rows[2].num;
+        document.getElementById("newCheckMemo").innerHTML = "Reimbursement";
+        document.getElementById("newCheckPayee").innerHTML = rows[2].payee;
+        document.getElementById("newCheckPayee1").innerHTML = "Lindsay Loren";
+        document.getElementById("newCheckAddress").innerHTML = "9099 Verge Rd, Buffalo, NY. 12002";
+        document.getElementById("numWord").innerHTML = "One Thousand and Zero Cents";
+        document.getElementById("newCheckAmt").innerHTML = rows[2].amount;
+        document.getElementById("newCheckDate").innerHTML = rows[2].date;
+
+        document.getElementById("printNum").innerHTML = rows[2].num;
+        document.getElementById("printMemo").innerHTML = "Reimbursement";
+        document.getElementById("printPayee").innerHTML = rows[2].payee;
+        document.getElementById("printPayee1").innerHTML = "Lindsay Loren";
+        document.getElementById("printAddress").innerHTML = "9099 Verge Rd, Buffalo, NY. 12002";
+        document.getElementById("printNumWord").innerHTML = "One Thousand and Zero Cents";
+        document.getElementById("printAmount").innerHTML = rows[2].amount;
+        document.getElementById("printDate").innerHTML = rows[2].date;
+    }
+
+</script>
+</html>
+
+<style>
+
+    tr {
+        width: 300px;
+    }
+    td {
+        cursor: pointer;
+    }
+    td {
+        cursor: pointer;
+        padding-top: 1.3em;
+        whitespace: nowrap;
+    }
+    .justify-content {
+        display: flex;
+        justify-content: space-around;
+    }
+    .justify-content-edge {
+        display: flex;
+        justify-content: space-between;
+    }
+    body.noScroll {
+        overflow: hidden;
+    }
+    select {
+        text-align: center;
+        text-align-last: center;
+    }
+    option {
+        text-align: left;
+    }
+    .editFont {
+        font-size: 12px;
+    }
+
+</style>

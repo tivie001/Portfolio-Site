@@ -1,0 +1,66 @@
+header, nav, main {
+  margin: auto;
+}
+#scaledImage {
+  float: right;
+  padding-left: 10px;
+}
+
+#coSlogan {
+  display: block;
+}
+
+div#navWrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  background: #d7915e;
+}
+
+div#mainWrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+nav {
+  max-width: 75rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-width: 75rem;
+}
+nav ul li {
+  float: left;
+  width: 100px;
+}
+nav ul li a {
+  display: block;
+  color: #eee;
+  background-color: #d7915e;
+  border-left: 1px solid #ffffff;
+  padding: .5rem 0;
+  text-decoration: none;
+  font-size: .9rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  border-left: none;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+  color: #000000;
+  cursor: pointer;
+}
+nav ul li.active a {
+  background-color: #eee;
+  color: #000000;
+}
+
+#heroImage {
+  max-width: 75rem;
+  width: 100px;
+}
+

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	text-align: center;
+}
+
+ul#song-info {
+    list-style-type: none;
+    padding-left: 4rem;
+    padding-top: .5rem;
+}
+ol#instructions li {
+  padding-top: 1rem;
+}
+
+.ipod {
+  position: absolute;
+  right: 27rem;
+}
+.playbtn {
+  position: relative;
+  height: 45px;
+  width: 45px;
+  top: 18.9rem;
+  left: 5.3rem;
+}
+.playbtn:hover {
+  position: relative;
+  height: 45px;
+  width: 45px;
+  top: 18.9rem;
+  left: 5.3rem;
+  opacity: .5;
+  cursor: pointer;
+}
+.pausebtn {
+  position: relative;
+  height: 45px;
+  width: 45px;
+  top: 26rem;
+  left: 2rem;
+}
+.pausebtn:hover {
+  position: relative;
+  height: 45px;
+  width: 45px;
+  top: 26rem;
+  left: 2rem;
+  opacity: .5;
+  cursor: pointer;
+}
+.skipbtn {
+  position: relative;
+  height: 45px;
+  width: 45px;
+  top: 22.1rem;
+  left: 2.5rem;
+}
+.skipbtn:hover {
+  position: relative;
+  height: 45px;
+  width: 45px;
+  top: 22.1rem;
+  left: 2.5rem;
+  opacity: .5;
+  cursor: pointer;
+}
+.footer {
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    background-color: black;
+    color: white;
+    height: 30px;
+    padding-top: 9px;
+    font-weight: bold;
+}

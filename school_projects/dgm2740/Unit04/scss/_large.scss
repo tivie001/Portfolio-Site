@@ -1,0 +1,110 @@
+/*----------- HEADER --------------*/
+#coSlogan {
+  display: block;
+}
+
+#fullHeader::after {
+  background-image: url('../images/zions.jpeg');
+  height: 76px;
+  opacity: .9;
+  z-index: -2;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  filter: blur(2px);
+}
+
+#headerWrapper {
+  background-image: url('../images/zions.jpg');
+  background-position: 47% 47%;
+  opacity: 1;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+/*----------- NAV --------------*/
+div#navWrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+nav {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-width: 75rem;
+}
+nav ul li {
+  float: left;
+  width: 100px;
+}
+nav ul li a {
+  display: block;
+  background-color: rgba(85, 107, 47, 0.7);
+  color: #eee;
+  border-left: 1px solid #777;
+  padding: .5rem 0;
+  text-decoration: none;
+  font-size: .9rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  border-left: none;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+  color: #333;
+}
+nav ul li.active a {
+  background-color: #eee;
+  color: #000;
+}
+
+/*----------- MAIN --------------*/
+#mainWrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*----------- FOOTER --------------*/
+
+
+/*----------- OTHER SASS STYLES --------------*/
+
+@keyframes move-moose {
+  0% {
+    left: 0;
+    transform: scaleX(-1);
+  }
+  50% {
+    left: 720px;
+    transform: scaleX(-1);
+  }
+  60% {
+    transform: translate(-2px, 3px) rotate(-1deg);
+  }
+  70% {
+    transform: translate(-1px, 2px) rotate(0deg);
+  }
+  70% {
+    transform: translate(0px, 1px) rotate(1deg);
+  }
+  100% {
+    left: 0;
+  }
+}

@@ -1,0 +1,109 @@
+/* Prevent adjustments of font size when orientation changes  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*----------- HEADER --------------*/
+
+#mainHeaders {
+    margin-left: 2rem;
+}
+
+#headerWrapper::after {
+    background-image: url('../images/mountains.jpg');
+    background-position: 25% 25%;
+    opacity: .3;
+    z-index: -1;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+
+/*----------- NAVIGATION --------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(85, 107, 47, 0.7);
+}
+
+li {
+    float: left;
+    width: 25%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav ul li:first-child a {
+    border-left: none;
+}
+
+nav ul li a:hover {
+    background-color: #eee;
+    color: #333;
+}
+nav ul li.active a {
+    background-color: #eee;
+    color: #000;
+}
+
+/*----------- MAIN --------------*/
+
+
+#mainWrapper {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    max-width: 100%;
+    padding: 10px 10px 75px 10px;
+}
+
+@keyframes move-moose {
+    0% {
+        left: 0;
+        transform: scaleX(-1);
+    }
+    50% {
+        left: 250px;
+        transform: scaleX(-1);
+    }
+    60% {
+        transform: translate(-2px, 3px) rotate(-1deg);
+    }
+    70% {
+        transform: translate(-1px, 2px) rotate(0deg);
+    }
+    70% {
+        transform: translate(0px, 1px) rotate(1deg);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+
+
+
+
+
+

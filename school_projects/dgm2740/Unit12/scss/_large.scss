@@ -1,0 +1,78 @@
+#headerLogo {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+#headerWrapper {
+  position: relative;
+  width: 100%;
+  background-color: #ddd;
+}
+div#mainWrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-top: 0;
+  height: 100%;
+}
+.navWrapper {
+  background-color: black;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+#mobileNav {
+  display: none;
+}
+#desktopNav {
+  display: block;
+}
+#tabletNav {
+  display: none;
+}
+nav {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  float: left;
+  width: 150px;
+}
+nav ul li a {
+  display: block;
+  color: #eee;
+  padding: .5rem 0;
+  text-decoration: none;
+  font-size: .9rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  border-left: none;
+}
+nav ul li:hover {
+  background-color: #FFFFFF;
+  color: #333;
+  cursor: pointer;
+}
+nav ul li:hover a {
+  color: #333;
+}
+nav ul li.active a {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+nav ul li.active {
+  color: #000000;
+}
+#bodyHeader {
+  font-size: 45px;
+  font-family: "Avenir";
+}
+#footerWrapper {
+  margin-left: 0
+}
+

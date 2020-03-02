@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>08 Grant's Tomb</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="answer.displayOptions()">
+	<h1 id="coName" class="header" style="margin-top: 0em" ><div id="header-text">Grant's Tomb</div></h1>
+	<h2 id="slogan" class="header" style="color: white; margin: -9rem 0 0 2rem">Beware what lies beneath!</h2>
+	<h1 style="margin-top: -5rem; color: #f2e2c1; font-family: Arial Black; text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black">Grant's Tomb</h1>
+	<h2 style="margin-top: 0rem; color: maroon">What I learned</h2>
+	<ul>
+		<li>How to create an object.</li>
+		<li>How to call two different methods.</li>
+		<li>How to style buttons and fade out when hovered over for better UX.</li>
+		<li>How get input from user and compare to get correct answer.</li>
+	</ul>
+	<table style="width: 130%; text-align: left; margin-left: .5rem; margin-bottom: -1rem">
+	  <tr>
+	    <th style="font-size: 25px; color: darkgrey">The Question of the Day</th>
+	  </tr>
+	</table>
+	<div class="row" style="width: 100%; background-color: #f2e2c1">
+		<div style="margin-bottom: -1.2rem">
+			<h3 style="padding-left: 1rem; background-color: maroon; color: white">Q: Who is buried in Grant's Tomb?</h2>
+		</div>
+		<div class="hover" style="border-style: solid; border-width: .5px" onclick="answer.calcCorrectAnswer(1)"> 
+			<p id="option1" style="padding-left: 1rem; background-color: #f2e2c1"></p>
+		</div>
+		<div class="hover" style="border-style: solid; border-width: .5px" onclick="answer.calcCorrectAnswer(2)"> 
+			<p id="option2" style="padding-left: 1rem; background-color: #f2e2c1"></p>
+		</div>
+		<div class="hover" style="border-style: solid; border-width: .5px" onclick="answer.calcCorrectAnswer(3)"> 
+			<p id="option3" style="padding-left: 1rem; background-color: #f2e2c1"></p>
+		</div>
+		<div class="hover"style="border-style: solid; border-width: .5px" onclick="answer.calcCorrectAnswer(4)"> 
+			<p id="option4" style="padding-left: 1rem; background-color: #f2e2c1"></p>
+		</div>
+		<div id="message"> 
+			<p id="feedback" style="padding-left: 1rem; color: white"></p>
+		</div>
+	</div>
+	<div>
+	</div>
+	<footer class=footer>Unit 08 - Grant's Tomb by Tyler Ivie</footer>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+</html>

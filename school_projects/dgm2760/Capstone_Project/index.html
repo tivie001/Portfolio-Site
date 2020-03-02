@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Music Player</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<img class="ipod" src="ipod.png">
+	<img class="playbtn" id="play1" src="play_button.png" onclick="getSongName(); getSongInfo()">
+	<img class="pausebtn" src="pause_btn.png" onclick="getSongName(); getSongInfo()">
+	<img class="skipbtn" src="skip.png" onclick="getSongName(); getSongInfo()">
+
+	<div style="padding-top: 1.5rem">
+		<ul id="song-info">
+			<li id="titleInfo"></li>
+			<li id="artistInfo"></li>
+			<li id="albumInfo"></li>
+		</ul>
+	</div>
+	<div style="text-align: left; width: 450px; margin: -4rem 0 0 4rem">
+		<h1 style="margin-left: 1.5rem">Instructions</h1>
+		<ol id="instructions" style="font-family: Georgia, serif; font-size: 20px">
+			<li>Click top button to begin playing the first song.</li>
+			<li>Click bottom button to pause the current song playing</li>
+			<li>Click top button again to continue playing current song</li>
+			<li>Click the right button to skip the current song and play the next song on the playlist.</li>
+			<li>Above all, rock out to the beautiful masterpieces of Beethoven and Bach themselves.</li>
+		</ol>
+	</div>
+	<footer class=footer>Capstone Project - Symphony Music Player by Tyler Ivie</footer>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+</html>

@@ -1,0 +1,98 @@
+/*----------- BODY --------------*/
+.card {
+  height: 200px;
+  grid-column: span 3;
+  text-align: center;
+  position: relative;
+  margin-bottom: 5rem;
+  box-shadow: 5px 10px #bababa;
+}
+.cardImage {
+  height: 200px;
+  width: 243.97px;
+}
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+input[type=submit] {
+  width: 20%;
+  background-color: #3C4B6C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #1a2030;
+}
+input[type=radio] {
+  margin-bottom: 1rem;
+}
+.checkBoxLabel {
+  padding-left: 1rem;
+  font-size: 14px;
+}
+.inputDiv {
+  width: 35%;
+}
+label {
+  font-family: Avenir;
+  font-weight: 100;
+}
+#color {
+  width: 200px;
+}
+#submitBtn {
+  margin-top: 1rem;
+}
+
+
+/*----------- HEADER --------------*/
+
+
+#headerWrapper {
+  width: 100%;
+}
+nav br {
+  display: none;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  float: left;
+  width: 100px;
+}
+nav ul li a {
+  display: block;
+  color: #eee;
+  padding: .5rem 0;
+  text-decoration: none;
+  font-size: .9rem;
+  text-align: center;
+}
+nav ul li:first-child a {
+  //border-left: none;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+  color: #000000;
+  cursor: pointer;
+}
+nav ul li.active a {
+  background-color: #eee;
+  color: #000000;
+}
+
