@@ -12,6 +12,15 @@ function openProjects(id) {
         case "cardsExample":
             window.open('../work_projects/cards.html');
             break;
+        case "pokedexApp":
+            window.open('https://pokedex-app.now.sh/', '_blank');
+            break;
+        case "starWarsApp":
+            window.open('../school_projects/dgm3780/assignment02/index.html');
+            break;
+        case "weatherApp":
+            window.open('https://suspicious-hoover-31ae51.netlify.com/', '_blank');
+            break;
         case "checksExample":
             window.open('../work_projects/checks.html');
             break;
