@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Road Warriors - Bike Shop</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/index.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="https://kit.fontawesome.com/8b54dd32ad.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
+</head>
+<body onload="myFunction()">
+	<div id="mySidebar" class="sidebar">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html" class="active">home</a>
+		<a href="javascript:void(0)">gear</a>
+		<a href="javascript:void(0)">living</a>
+		<a href="shopBikes.html">bikes</a>
+		<a href="javascript:void(0)">buying guides</a>
+		<a href="javascript:void(0)">more</a>
+	</div>
+	<header>
+		<div class="header">
+			<button id="hamBtn" class="openbtn" onclick="openMobileNav()">&#9776;</button>
+			<h1>Road Warriors<i class="fas fa-biking logo"></i></h1>
+			<i class="fas fa-search"></i>
+		</div>
+		<div id="navbar">
+			<div class="nav-container">
+				<div id="nav-logo" class="hide-nav-logo"><a><h1>Road Warriors<i class="fas fa-biking logo"></i></h1></a></div>
+				<div class="nav-links">
+					<a href="index.html" class="active">HOME</a>
+					<a href="javascript:void(0)">GEAR</a>
+					<a href="javascript:void(0)">LIVING</a>
+					<a href="shopBikes.html">BIKES</a>
+					<a href="javascript:void(0)">BUYING GUIDES</a>
+					<a href="javascript:void(0)">MORE</a>
+					<div class="search-container">
+						<form action="">
+							<input type="text" placeholder="Search..." name="search">
+							<button type="submit"><i class="fa fa-search"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="main-container">
+			<div class="image-container">
+				<img class="hero-image" src="assets/cafe-racer-hero-image-overlay.jpg" alt="BMW cafe racer bike in front of mountain">
+			</div>
+			<div class="catalog-container">
+				<div class="headings text-xl-center">
+					<div class="horizontal-line"></div>
+					<h1>FEATURED PRODUCTS</h1>
+				</div>
+				<div class="catalog-row">
+					<div class="catalog-item" onclick="sendToBikePage()">
+						<img id="customBikePic" src="assets/sportbike5.jpg" alt="The New 2020 KTM"/>
+						<div class="catalog-text">
+							<h1>The New 2020 KTM</h1>
+							<p class="price-text small-caps">see more</p>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<img src="assets/simpson-bike-helmet.jpg" alt="Simpson Outlaw Bandit Motorcycle Helmet"/>
+						<div class="catalog-text">
+							<h1>Simpson Outlaw Bandit Motorcycle Helmet</h1>
+							<p class="price-text">$449.95</p>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<img src="assets/bike-jacket.jpg" alt="Redline Men's Orange Stripe Cowhide Leather Motorcycle Jacket, Black M-3200"/>
+						<div class="catalog-text">
+							<h1>Redline Men's Orange Stripe Cowhide Leather Motorcycle Jacket, Black M-3200</h1>
+							<p class="price-text">$299.99</p>
+						</div>
+					</div>
+				</div>
+				<div class="see-more-btn">
+					<button>more products</button>
+				</div>
+				<div class="headings text-xl-center">
+					<div class="horizontal-line"></div>
+					<h1>BEST DEALS</h1>
+				</div>
+				<div class="catalog-row">
+					<div class="catalog-item">
+						<img src="assets/cruiser6.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
+						<div class="catalog-text">
+							<h1>Cafe Cruiser 1150</h1>
+							<div class="deal-container">
+								<p class="price-text"><span class="small-text">was</span><br>$4,249.99</p>
+								<p class="deal-text"><span class="small-text">now</span><br>$2,249.99</p>
+							</div>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<img src="assets/california-helmet.jpeg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
+						<div class="catalog-text">
+							<h1>Custom-Made California Gold Helmet</h1>
+							<div class="deal-container">
+								<p class="price-text"><span class="small-text">was</span><br>$150.00</p>
+								<p class="deal-text"><span class="small-text">now</span><br>$79.99</p>
+							</div>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<img src="assets/sportbike1.jpg" alt="Guy standing on BMW cafe racer on the roads in the woods"/>
+						<div class="catalog-text">
+							<h1>Honda CBR600RR</h1>
+							<div class="deal-container">
+								<p class="price-text"><span class="small-text">was</span><br>$10,149.99</p>
+								<p class="deal-text"><span class="small-text">now</span><br>$6,999.99</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="see-more-btn">
+					<button>more deals</button>
+				</div>
+				<div class="subscribe-row">
+					<div class="subscribe-item">
+						<h1>SUBSCRIBE TO EMAIL</h1>
+						<div class="long-horizontal-line"></div>
+						<div class="short-horizontal-line"></div>
+						<span class="small-text">got mail<span class="select-q">?</span> sign up for road warriors newsletter.</span>
+						<div class="search-container">
+							<form action="">
+								<input type="email" placeholder="ENTER YOUR EMAIL" name="email">
+								<button>subscribe</button>
+							</form>
+							<div class="nav-links-row">
+								<i class="fab fa-facebook-square"></i>
+								<i class="fab fa-instagram"></i>
+								<i class="fab fa-pinterest-square"></i>
+								<i class="fab fa-twitter-square"></i>
+								<i class="fab fa-youtube-square"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="headings text-xl-center">
+					<div class="horizontal-line"></div>
+					<h1>REVIEWS</h1>
+				</div>
+				<div class="reviews-row">
+					<div class="review-item">
+						<img src="assets/reviewer1.jpg">
+						<div class="review-text">
+							<h1>Road Warriors has the best stuff!</h1>
+							<div class="rating">
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+							</div>
+							<span class="small-caps">written by</span>
+							<h2>Catherine McPhee</h2>
+							<div class="review">
+								I got a new BMW 3100 and matching gear from them at a great deal and look forward to good
+								weather so I go out and take advantage of these quality products!
+							</div>
+						</div>
+					</div>
+					<div class="review-item">
+						<img src="assets/reviewer2.jpg">
+						<div class="review-text">
+							<h1>Love my Redline Men's Orange Stripe jacket!</h1>
+							<div class="rating">
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+							</div>
+							<span class="small-caps">written by</span>
+							<h2>Jimbo Webber</h2>
+							<div class="review">
+								Bought the featured jacket, Redline Men's Orange Stripe Cowhide Leather Motorcycle Jacket, Black M-3200
+								and I absolutely love it. It is light enough to be worn in the summer and warm enough for winter
+								as well!
+							</div>
+						</div>
+					</div>
+					<div class="review-item">
+						<img src="assets/reviewer3.jpg">
+						<div class="review-text">
+							<h1>I love this place! Shipping takes longer than expected but super high quality products.</h1>
+							<div class="rating">
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star yellow-star"></i>
+								<i class="fas fa-star grey-star"></i>
+							</div>
+							<span class="small-caps">written by</span>
+							<h2>Francis Jacobson</h2>
+							<div class="review">
+								Road Warriors has the best products at the best price! I hit up the recent sale they were having
+								on accessories and I was very impressed with what I got for the price. Shipping took a whole month
+								when it was only suppose to take 2 weeks that why I gave them a 4 out of 5 star rating but
+								in the end I love this place and would buy again.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="footer-container">
+			<h1 class="footer-logo">Road Warriors<i class="fas fa-biking logo"></i></h1>
+			<div class="nav-links-row">
+				<a href="index.html"><h3>home</h3></a>
+				<h3 class="slash-divider">/</h3>
+				<a href="javascript:void(0)"><h3>gear</h3></a>
+				<h3 class="slash-divider">/</h3>
+				<a href="javascript:void(0)"><h3>living</h3></a>
+				<h3 class="slash-divider">/</h3>
+				<a href="shopBikes.html"><h3>bikes</h3></a>
+				<h3 class="slash-divider">/</h3>
+				<a href="javascript:void(0)"><h3>buying guides</h3></a>
+				<h3 class="slash-divider">/</h3>
+				<a href="javascript:void(0)"><h3>more</h3></a>
+			</div>
+			<div class="nav-links-row">
+				<p class="copyright">&copy; 2020 tyler ivie &bull; all rights reserved &bull; dgm 2780</p>
+			</div>
+			<div class="social-links-row">
+				<i class="fab fa-facebook-square"></i>
+				<i class="fab fa-instagram"></i>
+				<i class="fab fa-pinterest-square"></i>
+				<i class="fab fa-twitter-square"></i>
+				<i class="fab fa-youtube-square"></i>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script>
+	window.onscroll = function() {myFunction()};
+
+	let navbar = document.getElementById("navbar");
+	let navBarLogo = document.getElementById("nav-logo");
+	let sticky = navbar.offsetTop;
+
+	function myFunction() {
+		if(window.pageYOffset <= 0) {
+			navbar.classList.add("nav-styles");
+		}
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky");
+			navbar.classList.add("animated");
+			navbar.classList.remove("nav-styles");
+			navbar.classList.add("scroll-nav-styles");
+			navBarLogo.classList.remove("hide-nav-logo");
+			navBarLogo.classList.add("show-nav-logo");
+			navBarLogo.classList.add("animated");
+		} else {
+			navbar.classList.remove("sticky");
+			navBarLogo.classList.add("hide-nav-logo");
+			navBarLogo.classList.remove("show-nav-logo");
+			navbar.classList.remove("scroll-nav-styles");
+			navbar.classList.add("nav-styles");
+		}
+	}
+</script>

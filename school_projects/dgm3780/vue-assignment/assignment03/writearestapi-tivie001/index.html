@@ -1,0 +1,103 @@
+<!--BMI APP EXAMPLE WORKING WITH API-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+    <script>
+        $( document ).ready(function() {
+            getAPIStatus()
+        });
+        $(() => {
+            $("#send").click(()=>{
+                sendMessage({
+                    data: '',
+                    query: 'ThisIsTheQuery',
+                    name: $("#name").val(),
+                    bodyWeight:$("#weight").val(),
+                    bodyHeight:$("#height").val(),
+                    bmiTotal: 0})
+            });
+        });
+
+        function getAPIStatus(){
+            $.get("http://localhost:3002/api", (data) => {
+                $("#initialAlertDiv").append(`
+                <h6 class="mb-0">${data.message}</h6>
+                `)
+            });
+        }
+
+        function getMessages(){
+            $.get("http://localhost:3002/api/data", (data) => {
+                data.forEach(addMessages);
+            });
+        }
+
+        function addMessages(data){
+            $("#messages").append(`
+              <h5 style="display: inline">
+                <span style="margin-right: 1rem"><i class="fas fa-weight"></i> ${data.bodyWeight}lbs.</span>
+                <i class="fas fa-ruler-vertical"></i>  ${data.bodyHeight}in.
+              </h5>
+              <br>
+              <p> Hi ${data.name}, based off the data that you gave us above
+                  your BMI index is:  <span style="font-weight: bold">${data.bmiTotal}</span>
+              </p>`)
+        }
+
+
+        function sendMessage(data){
+            $.post("http://localhost:3002/api/data", data);
+            getMessages()
+        }
+    </script>
+
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div class="rounded" style="max-width: 30rem; margin: 0 auto; padding: 2rem; background-color: #f1f1f1">
+        <div class="alert alert-info" id="initialAlertDiv" role="alert"></div>
+        <div id="secondaryAlertDiv"></div>
+        <h1 class="display-4">BMI Calculator <i class="fas fa-calculator"></i></h1>
+        <p class="lead">Body Mass Index</p>
+        <hr class="my-4">
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" id="name" placeholder="Enter name">
+            <small id="nameHelp" class="form-text text-muted">Let us know what to call you!</small>
+        </div>
+        <div class="form-group">
+            <label>Weight (Pounds)</label>
+            <input class="form-control" id="weight" placeholder="Enter your weight in lbs.">
+        </div>
+        <div class="form-group">
+            <label>Height (Inches)</label>
+            <input class="form-control" id="height" placeholder="Enter your height in inches">
+        </div>
+        <a id="send" class="btn btn-primary btn-lg" href="#" role="button">SUBMIT</a>
+        <hr class="my-4">
+        <div id="messages" style="background-color: #FFFFFF; padding: 1.5rem">
+            <h6 style="color: #c8c8c8">Result History</h6>
+        </div>
+    </div>
+    
+</body>
+</html>
